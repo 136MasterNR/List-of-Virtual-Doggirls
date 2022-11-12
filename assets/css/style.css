@@ -1,0 +1,238 @@
+* {
+  font-family: 'Play', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+:root {
+  --gray: #cfcfcf;
+  --white: #f0f0f0;
+  --blue: #2b87d3;
+  --black: #161c21;
+}
+
+body {
+  background: #757bf2 !important;
+}
+
+header a, a:hover {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.bottom p {
+  position: fixed;
+  bottom: -5px;
+  left: 44vw;
+  z-index: 5;
+  color: var(--gray);
+}
+
+.bottom p a {
+  text-decoration: none;
+  color: white;
+}
+
+/*** title ***/
+.title h1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.list-title h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/*** vtuber listing ***/
+.vtubers {
+  padding-top: 20px;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.vtubers .title {
+  position: relative;
+  overflow: hidden;
+}
+
+.vtubers .title span {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.vtubers .title span:before, .vtubers .title span:after {
+  content: '';
+  display: block;
+  width: 1000px;
+  position: absolute;
+  top: 0.73em;
+  border-top: 1px solid white;
+  border-radius: 100%;
+}
+
+.vtubers .title span:before {
+  right: 100%;
+}
+
+.vtubers .title span:after {
+  left: 100%;
+}
+
+.vtubers .list {
+  margin-top: -26px;
+  text-align: center;
+  padding-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.vtubers .list .vtuber {
+  margin: 15px;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+}
+
+.vtubers .list .vtuber .text {
+  margin: 28px 15px 0;
+}
+
+.vtubers .list img {
+  width: 128px;
+  height: 128px;
+  border-radius: 2px;
+  border: 5px solid var(--white);
+  background: var(--gray);
+  border-radius: 50%;
+}
+
+.vtubers .list .text h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.vtubers .list .text h3 a {
+  color: var(--white);
+}
+
+.vtubers .list .text span {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--gray);
+  opacity: 0.9;
+}
+
+.vtubers .text h3 span a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+/* Auto Adjustment */
+@media (max-width: 1200px) {
+  .vtubers {
+    padding-top: 20px;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .vtubers .list {
+    margin-top: -18.5px;
+    text-align: center;
+    padding-top: 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .title h1 {
+    margin: 5px 5px 0;
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .area ul {
+    display: none;
+  }
+  .vtubers .list {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    border: none;
+  }
+  .title h1 {
+    margin: 0px 5px 0;
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .title img {
+    width: 48px;
+    height: 48px;
+  }
+  .vtubers .list .vtuber {
+    margin: 15px;
+    text-align: center;
+    display: block;
+  }
+  header {
+    line-height: 0;
+    background: var(--gray);
+    height: 60px;
+    text-align: center;
+    color: var(--white);
+  }
+}
+/*# sourceMappingURL=style.css.map */
