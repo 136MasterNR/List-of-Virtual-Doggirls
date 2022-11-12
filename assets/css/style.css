@@ -31,7 +31,7 @@ header a, a:hover {
 .bottom p {
   position: fixed;
   bottom: -5px;
-  left: 44vw;
+  left: 50vw;
   z-index: 5;
   color: var(--gray);
 }
