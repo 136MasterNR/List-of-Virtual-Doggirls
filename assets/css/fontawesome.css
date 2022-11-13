@@ -7,7 +7,7 @@ h3 #icon {
 }
 
 .text h3 span i {
-    text-indent: 7px;
+    text-indent: 6px;
 }
 
 .fa-twitter {
@@ -34,6 +34,7 @@ h3 #icon {
     -webkit-text-fill-color: transparent;
     font-size: 25px;
     top: 0.15em;
+    right: 1px;
     position: relative;
 }
 
@@ -43,4 +44,8 @@ h3 #icon {
 
 .fa-discord{
     color: #b7bcff;
+}
+
+.fa-deviantart {
+    color:  #00e59b;
 }

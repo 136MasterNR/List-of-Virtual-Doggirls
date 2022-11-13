@@ -29,10 +29,12 @@ header a,a:hover {
 
 .bottom p {
     position: fixed;
-    bottom: -5px;
-    left: 50vw;
+    bottom: -15px;
+    left: 47.5vw;
     z-index: 5;
     color: var(--gray);
+    white-space: nowrap;
+    font-size: 15px;
     a {
         text-decoration: none;
         color: white;
@@ -120,7 +122,11 @@ header a,a:hover {
     height: 128px;
     border-radius: 2px;
     border: 5px solid var(--white);
-    background: var(--gray);
+    background: rgb(255,243,208);
+    background: -moz-linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff3d0",endColorstr="#ffffff",GradientType=1); 
     border-radius: 50%;
 }
 
@@ -146,7 +152,39 @@ header a,a:hover {
 
 /* Auto Adjustment */
 
+@media (max-width: 1500px) {
+    .area {
+        height: 120vh;
+
+        .circles {
+            height: 120vh;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .area {
+        height: 140vh;
+
+        .circles {
+            height: 140vh;
+        }
+    }
+}
+
 @media (max-width: 1200px) {
+
+    .bottom p {
+        left: 83vw;
+    }
+
+    .area {
+        height: 200vh;
+
+        .circles {
+            height: 200vh;
+        }
+    }
 
     .vtubers {
         padding-top: 20px;
@@ -179,9 +217,27 @@ header a,a:hover {
     }
 }
 
+@media (max-width: 1060px) {
+    .area {
+        height: 260vh;
+
+        .circles {
+            height: 260vh;
+        }
+    }
+}
+
 @media (max-width: 800px) {
-    .area ul{
-        display: none;
+    .bottom p {
+        left: 83vw;
+    }
+
+    .area {
+        height: 800vh;
+
+        .circles {
+            height: 800vh;
+        }
     }
 
     .vtubers .list {
@@ -220,4 +276,24 @@ header a,a:hover {
         color: var(--white);
     }
     
+}
+
+@media (max-width: 780px) {
+    .area {
+        height: 900vh;
+
+        .circles {
+            height: 900vh;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .area {
+        height: 1050vh;
+
+        .circles {
+            height: 1050vh;
+        }
+    }
 }
