@@ -4,6 +4,7 @@ h3 #icon {
     border-bottom: 5px solid transparent;
     border-radius: 5px;
     background-color: rgba(49, 49, 49, 0.2);
+    line-height: 25px;
 }
 
 .text h3 span i {
