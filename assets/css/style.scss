@@ -152,37 +152,22 @@ header a,a:hover {
 
 /* Auto Adjustment */
 
-@media (max-width: 1500px) {
-    .area {
-        height: 120vh;
-
-        .circles {
-            height: 120vh;
-        }
-    }
-}
-
-@media (max-width: 1300px) {
-    .area {
-        height: 140vh;
-
-        .circles {
-            height: 140vh;
-        }
-    }
-}
-
 @media (max-width: 1200px) {
 
     .bottom p {
-        left: 83vw;
+        position: relative;
+        top: 15px;
+        margin-bottom: 11px;
+        left: 44vw;
+        text-size-adjust: auto;
+        width: 50%;
     }
 
     .area {
-        height: 200vh;
+        height: 130vh;
 
         .circles {
-            height: 200vh;
+            height: 130vh;
         }
     }
 
@@ -217,83 +202,36 @@ header a,a:hover {
     }
 }
 
-@media (max-width: 1060px) {
-    .area {
-        height: 260vh;
-
-        .circles {
-            height: 260vh;
-        }
-    }
-}
-
 @media (max-width: 800px) {
     .bottom p {
-        left: 83vw;
+        position: relative;
+        top: 5px;
+        margin-bottom: 11px;
+        left: 40vw;
+        text-size-adjust: auto;
+        width: 50%;
     }
 
     .area {
-        height: 800vh;
+        height: 193vh;
 
         .circles {
-            height: 800vh;
+            height: 193vh;
         }
     }
 
-    .vtubers .list {
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 50px;
-        display: grid;
-        grid-template-columns: 1fr;
-        border:none;
-    }
-
-    .title h1 {
-        margin: 0px 5px 0;
-        color: var(--white);
-        font-weight: 700;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-    
-    .title img {
-        width: 48px;
-        height: 48px;
-    }
 
     .vtubers .list .vtuber {
-        margin: 15px;
+        margin: 0px;
         text-align: center;
         display: block;
-    }
+        z-index: 1;
 
-    header {
-        line-height: 0;
-        background: var(--gray);
-        height: 60px;
-        text-align: center;
-        color: var(--white);
+        transform: scale(0.8, 0.8);
+        -ms-transform: scale(0.8, 0.8); /* IE 9 */
+        -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+        -o-transform: scale(0.8, 0.8); /* Opera */
+        -moz-transform: scale(0.8, 0.8); /* Firefox */
     }
     
-}
-
-@media (max-width: 780px) {
-    .area {
-        height: 900vh;
-
-        .circles {
-            height: 900vh;
-        }
-    }
-}
-
-@media (max-width: 700px) {
-    .area {
-        height: 1050vh;
-
-        .circles {
-            height: 1050vh;
-        }
-    }
 }

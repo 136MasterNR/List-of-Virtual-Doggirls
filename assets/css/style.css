@@ -165,33 +165,23 @@ header a, a:hover {
 }
 
 /* Auto Adjustment */
-@media (max-width: 1500px) {
-  .area {
-    height: 120vh;
-  }
-  .area .circles {
-    height: 120vh;
-  }
-}
-
-@media (max-width: 1300px) {
-  .area {
-    height: 140vh;
-  }
-  .area .circles {
-    height: 140vh;
-  }
-}
-
 @media (max-width: 1200px) {
   .bottom p {
-    left: 83vw;
+    position: relative;
+    top: 15px;
+    margin-bottom: 11px;
+    left: 44vw;
+    -webkit-text-size-adjust: auto;
+       -moz-text-size-adjust: auto;
+        -ms-text-size-adjust: auto;
+            text-size-adjust: auto;
+    width: 50%;
   }
   .area {
-    height: 200vh;
+    height: 130vh;
   }
   .area .circles {
-    height: 200vh;
+    height: 130vh;
   }
   .vtubers {
     padding-top: 20px;
@@ -229,75 +219,38 @@ header a, a:hover {
   }
 }
 
-@media (max-width: 1060px) {
-  .area {
-    height: 260vh;
-  }
-  .area .circles {
-    height: 260vh;
-  }
-}
-
 @media (max-width: 800px) {
   .bottom p {
-    left: 83vw;
+    position: relative;
+    top: 5px;
+    margin-bottom: 11px;
+    left: 40vw;
+    -webkit-text-size-adjust: auto;
+       -moz-text-size-adjust: auto;
+        -ms-text-size-adjust: auto;
+            text-size-adjust: auto;
+    width: 50%;
   }
   .area {
-    height: 800vh;
+    height: 193vh;
   }
   .area .circles {
-    height: 800vh;
-  }
-  .vtubers .list {
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 50px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    border: none;
-  }
-  .title h1 {
-    margin: 0px 5px 0;
-    color: var(--white);
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  .title img {
-    width: 48px;
-    height: 48px;
+    height: 193vh;
   }
   .vtubers .list .vtuber {
-    margin: 15px;
+    margin: 0px;
     text-align: center;
     display: block;
-  }
-  header {
-    line-height: 0;
-    background: var(--gray);
-    height: 60px;
-    text-align: center;
-    color: var(--white);
-  }
-}
-
-@media (max-width: 780px) {
-  .area {
-    height: 900vh;
-  }
-  .area .circles {
-    height: 900vh;
-  }
-}
-
-@media (max-width: 700px) {
-  .area {
-    height: 1050vh;
-  }
-  .area .circles {
-    height: 1050vh;
+    z-index: 1;
+    transform: scale(0.8, 0.8);
+    -ms-transform: scale(0.8, 0.8);
+    /* IE 9 */
+    -webkit-transform: scale(0.8, 0.8);
+    /* Safari and Chrome */
+    -o-transform: scale(0.8, 0.8);
+    /* Opera */
+    -moz-transform: scale(0.8, 0.8);
+    /* Firefox */
   }
 }
 /*# sourceMappingURL=style.css.map */
