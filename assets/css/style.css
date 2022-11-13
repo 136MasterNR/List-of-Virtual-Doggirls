@@ -156,6 +156,41 @@ header a, a:hover {
   color: var(--white);
 }
 
+div.vtuber > div > h3 > a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  background: -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, left top, right top, from(red), color-stop(#b833ff), to(#0700c8));
+  background: linear-gradient(to right, white, white), linear-gradient(to right, red, #b833ff, #0700c8);
+  background-size: 0% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: background-size 400ms;
+  transition: background-size 400ms;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+div.vtuber > div > h3 > a:hover {
+  background-size: 0 2px, 100% 2px;
+}
+
+.text h3 span a {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.text h3 span a:hover {
+  color: white !important;
+}
+
+.vtuber .image {
+  border-radius: 100%;
+}
+
+.vtuber .image:hover ~ .text h3 a {
+  background-size: 0 2px, 100% 2px;
+}
+
 .vtubers .list .text span {
   font-family: 'Inter', sans-serif;
   font-size: 1rem;

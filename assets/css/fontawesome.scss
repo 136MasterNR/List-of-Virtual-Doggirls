@@ -1,0 +1,62 @@
+h3 #icon {
+    border-right: 5px solid transparent;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-radius: 5px;
+    background-color: rgba(49, 49, 49, 0.2);
+    line-height: 25px;
+    i {
+        transition: transform 125ms;
+    }
+    i:hover {
+        transform: scale(1.15, 1.15);
+        -ms-transform: scale(1.15, 1.15); /* IE 9 */
+        -webkit-transform: scale(1.15, 1.15); /* Safari and Chrome */
+        -o-transform: scale(1.15, 1.15); /* Opera */
+        -moz-transform: scale(1.15, 1.15); /* Firefox */
+    }
+}
+
+.text h3 span i {
+    text-indent: 6px;
+}
+
+.fa-twitter {
+    color: #74d8ff;
+}
+.fa-youtube {
+    color: rgb(255, 69, 69);
+}
+
+.fa-twitch {
+    color: #580ce4;
+}
+
+.fa-tiktok {
+    color: #111111;
+    filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+}
+
+.fa-instagram {
+    font-size:30px;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    top: 0.15em;
+    right: 1px;
+    position: relative;
+}
+
+.fa-facebook {
+    color: #78a5ff;
+}
+
+.fa-discord{
+    color: #b7bcff;
+}
+
+.fa-deviantart {
+    color:  #00e59b;
+}

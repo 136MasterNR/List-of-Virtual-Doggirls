@@ -138,11 +138,49 @@ header a,a:hover {
     font-weight: 700;
     font-size: 1.5rem;
 }
-
 .vtubers .list .text h3 a {
     color: var(--white);
 }
 
+div.vtuber > div > h3 > a {
+    text-decoration-line: none;
+    background:
+      linear-gradient(
+        to right,
+        white,
+        white
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgb(184, 51, 255),
+        rgb(7, 0, 200)
+    );
+    background-size: 0% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    transition: all 400ms;
+    
+    &:hover {
+        background-size: 0 2px, 100% 2px;
+      }
+  }
+
+  .text h3 span a{
+    transition: all 200ms;
+    
+    &:hover {
+        color: white!important;
+    }
+  }
+
+  .vtuber .image{
+    border-radius: 100%;
+    &:hover ~ .text h3 a {
+        background-size: 0 2px, 100% 2px;
+    }
+  }
 .vtubers .list .text span {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
@@ -247,7 +285,7 @@ header a,a:hover {
         border-bottom: 1px white;
         border-left: none;
         border-right: none;
-        
+
             .vtuber {
             margin: 0;
             margin-left: -55px;
