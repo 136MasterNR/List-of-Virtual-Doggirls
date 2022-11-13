@@ -21,6 +21,8 @@ img {
 
 body {
   background: #757bf2 !important;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 header a, a:hover {
