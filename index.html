@@ -22,6 +22,7 @@
 
         <link href="./assets/css/style.css" rel="stylesheet">
         <link href="./assets/css/bg.css" rel="stylesheet">
+        <link href="./assets/css/popup.css" rel="stylesheet">
         <link href="./assets/css/font.css" rel="stylesheet">
         <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
         <link href="./assets/css/fontawesome.css" rel="stylesheet">
@@ -227,7 +228,21 @@
                             </span>
                         </h3>
                     </div>
-                    
+                </div>
+                <br/> <!-- Space -->
+                <div class="vtuber">
+                    <div class="image">
+                        <a href="https://www.youtube.com/c/NadeKomaKemomimiRefle" target=”_blank”><img src="https://pbs.twimg.com/profile_images/1586753961737887744/g5XkJaqV_400x400.jpg" alt="Nadeshiko Komae"></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="https://www.youtube.com/c/NadeKomaKemomimiRefle" target=”_blank” style="font-size: 1.36rem;">Nadeshiko Komae</a><span> EN</span><br/>
+                            <span><a href="https://www.kemomimirefle.com/" target=”_blank”>Kemomimi Refre<i class="fa-solid fa-up-right-from-square fa-2xs"></i></a></span>
+                            <br/><span id="icon">
+                                <a href="https://www.youtube.com/channel/UCM6Ld_dNSaUQ2uwjJ4Gq9FA" target=”_blank”><i class="fa-brands fa-youtube fa-xl"></i></a>
+                                <a style="cursor: pointer;" onclick="document.getElementById('id01').style.display='block'"><i class="fa-brands fa-twitter fa-xl"></i></a>
+                            </span>
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -235,6 +250,21 @@
             <p><a href="https://github.com/136MasterNR" target=”_blank”>Master</a> x <a href="https://github.com/Naibuu" target=”_blank”>Naibuu</a></p>
         </div>
     </div>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content-o">
+            <div class="container">
+                <h1>Explicit Content Ahead!</h1>
+                <p>Are you sure you want to continue?</p>
+          
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Back</button>
+                    <a href="https://twitter.com/komae_kemo" target=”_blank”><button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Enter</button></a>
+                </div>
+            </div>
+        </form>
+    </div>
     <script src="https://kit.fontawesome.com/7deff23d2f.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/popup.js"></script>
     </body>
 </html>

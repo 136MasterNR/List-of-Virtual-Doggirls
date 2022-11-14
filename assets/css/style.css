@@ -110,7 +110,7 @@ header a, a:hover {
 .vtubers .list {
   margin-top: -26px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 15px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;

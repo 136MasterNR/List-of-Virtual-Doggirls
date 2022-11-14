@@ -95,19 +95,18 @@ header a,a:hover {
             &:after { left: 100%; }
         }
     }
-}
-
-.vtubers .list {
-    margin-top: -26px;
-    text-align: center;
-    padding-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 1px solid white;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    border-bottom-left-radius: 1pc;
-    border-bottom-right-radius: 1pc;
+    .list {
+        margin-top: -26px;
+        text-align: center;
+        padding-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        border-bottom-left-radius: 1pc;
+        border-bottom-right-radius: 1pc;
+    }
 }
 
 .vtubers .list .vtuber {
