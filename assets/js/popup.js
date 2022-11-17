@@ -1,9 +1,9 @@
-// Get the modal
-var modal = document.getElementById('id01');
+function warn(link) {
+  document.getElementById("warn_url").href=`${link}`; 
+  return false;
+};
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+function dismissWarn() {
+  $('#warnModal').modal('hide');
+  return false;
+};

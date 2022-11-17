@@ -30,7 +30,7 @@ header a,a:hover {
 }
 
 .bottom p {
-    position: fixed;
+    position: relative;
     bottom: -15px;
     left: 47.5vw;
     z-index: 5;
@@ -42,6 +42,7 @@ header a,a:hover {
         color: white;
     }
 }
+
 
 /*** title ***/
 
@@ -212,13 +213,13 @@ div.vtuber > div > h3 > a {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
 
     .bottom p {
         position: relative;
         top: 15px;
         margin-bottom: 11px;
-        left: 44vw;
+        left: 47vw;
         text-size-adjust: auto;
         width: 50%;
     }
