@@ -1,6 +1,7 @@
 .modal-confirm {		
 	color: #636363;
 	width: 400px;
+
   .modal-content {
     padding: 20px;
     border-radius: 5px;
@@ -9,16 +10,25 @@
     font-size: 14px;
     background-color: #2c2f33;
   }
+  
   .modal-header {
     border-bottom: none;   
     position: relative;
   }
+
   h4.modal-title {
     text-align: center;
     font-size: 26px;
-    margin: 30px 0 -10px;
     color: white;
   }
+
+  .modal-body {
+    color: #999;
+    p {
+      margin-bottom: 0.7rem;
+    }
+  }
+
   .close {
     font-size: 25px;
     background-color: transparent;
@@ -28,9 +38,7 @@
     right: -12px;
     color: white;
   }
-  .modal-body {
-    color: #999;
-  }
+
   .modal-footer {
     border: none;
     text-align: center;		
@@ -38,9 +46,11 @@
     font-size: 13px;
     padding: 10px 15px 25px;
   }
+
   .modal-footer a {
     color: #999;
-  }		
+  }
+
   .icon-box {
     width: 80px;
     height: 80px;
@@ -48,12 +58,14 @@
     z-index: 9;
     text-align: center;
   }
+
   .icon-box i {
     color: #f15e5e;
     font-size: 46px;
     display: inline-block;
     margin-top: 13px;
   }
+
   .btn, .btn:active {
     color: #fff;
     border-radius: 4px;
@@ -67,16 +79,21 @@
     border-radius: 3px;
     margin: 0 5px;
   }
+  
   .btn-secondary {
     background: #989898;
   }
+
   .btn-secondary:hover, .btn-secondary:focus {
     background: #828282;
   }
+
   .btn-danger {
     background: #f15e5e;
   }
+  
   .btn-danger:hover, .btn-danger:focus {
     background: #ee3535;
   }
+
 }

@@ -26,29 +26,25 @@ h3 #icon i:hover {
   /* Firefox */
 }
 
-.text h3 span i {
-  text-indent: 6px;
-}
-
-.fa-twitter {
+h3 #icon .fa-twitter {
   color: #74d8ff;
 }
 
-.fa-youtube {
+h3 #icon .fa-youtube {
   color: #ff4545;
 }
 
-.fa-twitch {
+h3 #icon .fa-twitch {
   color: #580ce4;
 }
 
-.fa-tiktok {
+h3 #icon .fa-tiktok {
   color: #111111;
   -webkit-filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
           filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
 }
 
-.fa-instagram {
+h3 #icon .fa-instagram {
   font-size: 30px;
   background: #d6249f;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -60,15 +56,15 @@ h3 #icon i:hover {
   position: relative;
 }
 
-.fa-facebook {
+h3 #icon .fa-facebook {
   color: #78a5ff;
 }
 
-.fa-discord {
+h3 #icon .fa-discord {
   color: #b7bcff;
 }
 
-.fa-deviantart {
-  color: #00e59b;
+.text h3 span i {
+  text-indent: 6px;
 }
 /*# sourceMappingURL=fontawesome.css.map */

@@ -20,8 +20,15 @@
 .modal-confirm h4.modal-title {
   text-align: center;
   font-size: 26px;
-  margin: 30px 0 -10px;
   color: white;
+}
+
+.modal-confirm .modal-body {
+  color: #999;
+}
+
+.modal-confirm .modal-body p {
+  margin-bottom: 0.7rem;
 }
 
 .modal-confirm .close {
@@ -32,10 +39,6 @@
   top: -15px;
   right: -12px;
   color: white;
-}
-
-.modal-confirm .modal-body {
-  color: #999;
 }
 
 .modal-confirm .modal-footer {
