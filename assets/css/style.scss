@@ -10,10 +10,16 @@
     --black: #161c21;
 }
 
+::selection {
+    background: rgb(194, 169, 255);
+}
+
 html {
     min-height: 100%;
     height: 100%;
     position: relative;
+    user-select: text;
+
     body {
         background: rgba(117,123,242,1);
         overflow-x: hidden;
@@ -34,7 +40,7 @@ header a,a:hover {
     color: var(--white)
 }
 
-.bottom p {
+#bottom p {
     position: relative;
     bottom: -15px;
     left: 47.5vw;
@@ -69,11 +75,16 @@ header a,a:hover {
 
 /*** vtuber listing ***/
 
+#vtubers {
+    animation: none;
+}
+
 .vtubers {
     padding-top: 20px;
     width: 1200px;
     max-width: 100%;
     margin: 0 auto;
+
     .title {
         position: relative;
         overflow: hidden;
@@ -185,6 +196,9 @@ div.vtuber > div > h3 > a {
     &:hover ~ .text h3 a {
         background-size: 0 2px, 100% 2px;
     }
+    a {
+        cursor: pointer;
+    }
   }
 .vtubers .list .text span {
     font-family: 'Inter', sans-serif;
@@ -202,13 +216,44 @@ div.vtuber > div > h3 > a {
     opacity: 0.6!important;
 }
 
+/* Tooltip Container */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+
+    .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    &:hover .tooltiptext {
+        visibility: visible;
+    }
+}
+
 /* Auto Adjustment */
 
 @media (min-width: 2400px) {
     .vtubers .list {
         margin-top: 137px;
     }
-    .bottom p {
+    #bottom p {
         font-size: 150%;
         margin-top: 170px;
     }
@@ -223,7 +268,7 @@ div.vtuber > div > h3 > a {
 }
 
 @media (max-width: 800px) {
-    .bottom p {
+    #bottom p {
         position: relative;
         top: 5px;
         margin-bottom: 11px;

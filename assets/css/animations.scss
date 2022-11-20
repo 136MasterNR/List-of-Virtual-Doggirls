@@ -1,0 +1,19 @@
+@keyframes offscreen {
+    from {transform: translateY(0px); opacity: 1;}
+    to {transform: translateY(-400px); opacity: 0;}
+}
+
+@keyframes onscreen {
+    from {transform: translateY(400px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes offscreenRev {
+    from {transform: translateY(0px); opacity: 1;}
+    to {transform: translateY(400px); opacity: 0;}
+}
+
+@keyframes onscreenRev {
+    from {transform: translateY(-400px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+}

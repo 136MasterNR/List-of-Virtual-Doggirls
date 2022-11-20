@@ -6,44 +6,29 @@ h3 #icon {
   background-color: rgba(49, 49, 49, 0.2);
   line-height: 25px;
 }
-
 h3 #icon i {
-  -webkit-transition: -webkit-transform 125ms;
-  transition: -webkit-transform 125ms;
   transition: transform 125ms;
-  transition: transform 125ms, -webkit-transform 125ms;
 }
-
 h3 #icon i:hover {
   transform: scale(1.15, 1.15);
-  -ms-transform: scale(1.15, 1.15);
-  /* IE 9 */
-  -webkit-transform: scale(1.15, 1.15);
-  /* Safari and Chrome */
-  -o-transform: scale(1.15, 1.15);
-  /* Opera */
-  -moz-transform: scale(1.15, 1.15);
-  /* Firefox */
+  -ms-transform: scale(1.15, 1.15); /* IE 9 */
+  -webkit-transform: scale(1.15, 1.15); /* Safari and Chrome */
+  -o-transform: scale(1.15, 1.15); /* Opera */
+  -moz-transform: scale(1.15, 1.15); /* Firefox */
 }
-
 h3 #icon .fa-twitter {
   color: #74d8ff;
 }
-
 h3 #icon .fa-youtube {
-  color: #ff4545;
+  color: rgb(255, 69, 69);
 }
-
 h3 #icon .fa-twitch {
   color: #580ce4;
 }
-
 h3 #icon .fa-tiktok {
   color: #111111;
-  -webkit-filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
-          filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+  filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
 }
-
 h3 #icon .fa-instagram {
   font-size: 30px;
   background: #d6249f;
@@ -55,16 +40,13 @@ h3 #icon .fa-instagram {
   right: 1px;
   position: relative;
 }
-
 h3 #icon .fa-facebook {
   color: #78a5ff;
 }
-
 h3 #icon .fa-discord {
   color: #b7bcff;
 }
 
 .text h3 span i {
   text-indent: 6px;
-}
-/*# sourceMappingURL=fontawesome.css.map */
+}/*# sourceMappingURL=fontawesome.css.map */

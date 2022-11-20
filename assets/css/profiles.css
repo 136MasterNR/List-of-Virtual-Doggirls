@@ -1,0 +1,105 @@
+.profile {
+  display: none;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+.profile .profile_items {
+  padding-left: 15vw;
+  padding-right: 15vw;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr;
+  position: relative;
+}
+.profile .profile_items img {
+  height: 100vh;
+}
+.profile .profile_items #profile_text {
+  width: 25vw;
+  border: 0.2vw solid rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 9% 9% 9% 9%;
+  padding: 1vw;
+  margin-top: 7.5vh;
+  margin-bottom: 7.5vh;
+  line-height: 0.8vh;
+}
+.profile .profile_items #profile_text .title {
+  font-size: 2vw;
+  color: white;
+}
+.profile .profile_items #profile_text .title hr {
+  color: white;
+  height: 0.11vw;
+  opacity: 0.7;
+  margin-top: 0.3vh;
+}
+.profile .profile_items #profile_text .title .hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20vw;
+}
+.profile .profile_items #profile_text .title .hr-small {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15vw;
+}
+.profile .profile_items #profile_text div.content {
+  text-align: left;
+}
+.profile .profile_items #profile_text div.content .in-title {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  color: white;
+  margin-top: 4vh;
+  font-size: 1.22vw;
+}
+.profile .profile_items #profile_text div.content p {
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
+  font-size: 1vw;
+}
+.profile .profile_items #profile_text div.content p a {
+  color: rgb(215, 226, 255);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.profile .profile_items button {
+  background: rgb(194, 169, 255);
+  background: linear-gradient(90deg, rgb(194, 169, 255) 0%, rgb(117, 123, 242) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c2a9ff",endColorstr="#757bf2",GradientType=1);
+  border: solid 0.2vw rgba(255, 255, 255, 0.9);
+  border-radius: 5vw;
+  color: white;
+  padding: 1.6vh 2vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 100vw;
+}
+@media (max-width: 1100px) {
+  .profile {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .profile .profile_items {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+  .profile .profile_items #profile_text {
+    width: 25vw;
+  }
+  .profile .profile_items #profile_text .title {
+    font-size: 1.7vw;
+  }
+  .profile .profile_items img {
+    height: 50vh;
+  }
+}/*# sourceMappingURL=profiles.css.map */
