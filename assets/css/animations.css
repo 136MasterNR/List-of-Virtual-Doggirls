@@ -20,7 +20,7 @@
 }
 @-webkit-keyframes onscreen {
   from {
-    transform: translateY(400px);
+    transform: translateY(500px);
     opacity: 0;
   }
   to {
@@ -30,7 +30,7 @@
 }
 @keyframes onscreen {
   from {
-    transform: translateY(400px);
+    transform: translateY(500px);
     opacity: 0;
   }
   to {
@@ -44,7 +44,7 @@
     opacity: 1;
   }
   to {
-    transform: translateY(400px);
+    transform: translateY(500px);
     opacity: 0;
   }
 }
@@ -54,13 +54,13 @@
     opacity: 1;
   }
   to {
-    transform: translateY(400px);
+    transform: translateY(500px);
     opacity: 0;
   }
 }
 @-webkit-keyframes onscreenRev {
   from {
-    transform: translateY(-400px);
+    transform: translateY(-500px);
     opacity: 0;
   }
   to {
@@ -70,7 +70,7 @@
 }
 @keyframes onscreenRev {
   from {
-    transform: translateY(-400px);
+    transform: translateY(-500px);
     opacity: 0;
   }
   to {

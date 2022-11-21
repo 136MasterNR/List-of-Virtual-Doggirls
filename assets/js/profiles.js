@@ -36,3 +36,7 @@ function transitionOff(modal) {
     });
     return false;
 }
+
+/* Query String Locators */
+
+if (document.getElementById(searchParams.get('dog'))) { transition(searchParams.get('dog')) }
