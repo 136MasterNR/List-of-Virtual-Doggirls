@@ -62,6 +62,10 @@
   margin-top: 4vh;
   font-size: 1.22vw;
 }
+.profile .profile_items #profile_text div.content .special-text {
+  margin-top: 1.3vw;
+  font-size: 0.9vw;
+}
 .profile .profile_items #profile_text div.content p {
   margin-left: 0;
   margin-right: 0;
@@ -129,6 +133,10 @@
     margin-top: 2vh;
     margin-bottom: 0.7vh;
     font-size: 5.22vw;
+  }
+  .profile .profile_items #profile_text div.content .special-text {
+    margin-top: 4.35vw;
+    font-size: 3.3vw;
   }
   .profile .profile_items #profile_text div.content p {
     color: white;
