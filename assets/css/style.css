@@ -49,7 +49,7 @@ header a, a:hover {
 #bottom p {
   position: relative;
   bottom: -15px;
-  left: 47.5vw;
+  left: 44.2vw;
   z-index: 5;
   color: var(--gray);
   white-space: nowrap;
@@ -58,6 +58,9 @@ header a, a:hover {
 #bottom p a {
   text-decoration: none;
   color: white;
+}
+#bottom p a:hover {
+  text-decoration: underline;
 }
 
 /*** title ***/
