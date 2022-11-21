@@ -63,6 +63,10 @@ header a, a:hover {
   text-decoration: underline;
 }
 
+.font-italic {
+  font-style: italic;
+}
+
 /*** title ***/
 .title h1 {
   align-items: center;

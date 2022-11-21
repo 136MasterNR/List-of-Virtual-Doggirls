@@ -22,7 +22,7 @@
 .profile .profile_items img {
   height: 100vh;
 }
-.profile .profile_items #profile_text {
+.profile .profile_items .profile_text {
   width: calc(150px + 20vw);
   border: 0.2vw solid rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.1);
@@ -32,47 +32,48 @@
   margin-bottom: 7.5vh;
   line-height: 0.8vh;
 }
-.profile .profile_items #profile_text .title {
-  font-size: 2.3vw;
+.profile .profile_items .profile_text .title {
+  font-family: "Acme", sans-serif;
+  font-size: 2.4vw;
   color: white;
 }
-.profile .profile_items #profile_text .title hr {
+.profile .profile_items .profile_text .title hr {
   color: white;
   height: 0.12vw;
   opacity: 0.7;
   margin-top: auto;
   margin-bottom: 0.61vw;
 }
-.profile .profile_items #profile_text .title .hr {
+.profile .profile_items .profile_text .title .hr {
   margin-left: auto;
   margin-right: auto;
   width: 20vw;
 }
-.profile .profile_items #profile_text .title .hr-small {
+.profile .profile_items .profile_text .title .hr-small {
   margin-left: auto;
   margin-right: auto;
   width: 15vw;
 }
-.profile .profile_items #profile_text div.content {
+.profile .profile_items .profile_text div.content {
   text-align: left;
 }
-.profile .profile_items #profile_text div.content .in-title {
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
+.profile .profile_items .profile_text div.content .in-title {
+  font-family: "Concert One", cursive;
   color: white;
   margin-top: 4vh;
   font-size: 1.22vw;
 }
-.profile .profile_items #profile_text div.content .special-text {
+.profile .profile_items .profile_text div.content .special-text {
   margin-top: 1.3vw;
   font-size: 0.9vw;
 }
-.profile .profile_items #profile_text div.content p {
+.profile .profile_items .profile_text div.content p {
   margin-left: 0;
   margin-right: 0;
   color: white;
   font-size: 1vw;
 }
-.profile .profile_items #profile_text div.content p a {
+.profile .profile_items .profile_text div.content p a {
   color: rgb(215, 226, 255);
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -100,7 +101,7 @@
   .profile .profile_items {
     grid-template-columns: 0.4fr;
   }
-  .profile .profile_items #profile_text {
+  .profile .profile_items .profile_text {
     margin-left: 15vw;
     margin-right: 10vw;
     margin-bottom: 15vh;
@@ -108,42 +109,37 @@
     height: 120vw;
     border-width: 0.6vw;
   }
-  .profile .profile_items #profile_text .title {
+  .profile .profile_items .profile_text .title {
     font-size: 6.3vw;
   }
-  .profile .profile_items #profile_text .title hr {
+  .profile .profile_items .profile_text .title hr {
     color: white;
     height: 0.28vw;
     opacity: 0.7;
     margin-top: auto;
     margin-bottom: 1.61vw;
   }
-  .profile .profile_items #profile_text .title .hr {
+  .profile .profile_items .profile_text .title .hr {
     width: 50vw;
   }
-  .profile .profile_items #profile_text .title .hr-small {
+  .profile .profile_items .profile_text .title .hr-small {
     width: 35vw;
   }
-  .profile .profile_items #profile_text div.content {
-    text-align: left;
-  }
-  .profile .profile_items #profile_text div.content .in-title {
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    color: white;
+  .profile .profile_items .profile_text div.content .in-title {
     margin-top: 2vh;
     margin-bottom: 0.7vh;
     font-size: 5.22vw;
   }
-  .profile .profile_items #profile_text div.content .special-text {
+  .profile .profile_items .profile_text div.content .special-text {
     margin-top: 4.35vw;
     font-size: 3.3vw;
   }
-  .profile .profile_items #profile_text div.content p {
+  .profile .profile_items .profile_text div.content p {
     color: white;
     font-size: 4vw;
     margin-bottom: 3vw;
   }
-  .profile .profile_items #profile_text div.content p a {
+  .profile .profile_items .profile_text div.content p a {
     color: rgb(215, 226, 255);
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;

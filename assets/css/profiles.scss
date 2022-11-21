@@ -25,7 +25,7 @@
             height: 100vh
         }
 
-        #profile_text {
+        .profile_text {
             width: calc(150px + 20vw);
             border: 0.2vw solid rgb(255, 255, 255);
             background-color: rgba(0, 0, 0, 0.1);
@@ -36,7 +36,8 @@
             line-height: 0.8vh;
 
             .title {
-                font-size: 2.3vw;
+                font-family: 'Acme', sans-serif;
+                font-size: 2.4vw;
                 color: white;
 
                 hr {
@@ -64,7 +65,7 @@
                 text-align: left;
                 
                 .in-title {
-                    font-family: Montserrat,Arial,Helvetica,sans-serif;
+                    font-family: 'Concert One', cursive;
                     color: white;
                     margin-top: 4vh;
                     font-size: 1.22vw;
@@ -113,7 +114,7 @@
     .profile .profile_items {
         grid-template-columns: 0.4fr;
 
-        #profile_text {
+        .profile_text {
             margin-left: 15vw;
             margin-right: 10vw;
             margin-bottom: 15vh;
@@ -142,11 +143,8 @@
             }
 
             div.content {
-                text-align: left;
                 
                 .in-title {
-                    font-family: Montserrat,Arial,Helvetica,sans-serif;
-                    color: white;
                     margin-top: 2vh;
                     margin-bottom: 0.7vh;
                     font-size: 5.22vw;
