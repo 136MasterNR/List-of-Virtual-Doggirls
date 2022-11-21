@@ -5,9 +5,15 @@
   width: 100vw;
   max-width: 100%;
 }
+.profile p {
+  margin-bottom: 0.75vw;
+}
+.profile h4 {
+  margin-bottom: 0.5vw;
+}
 .profile .profile_items {
-  padding-left: 15vw;
-  padding-right: 15vw;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   display: grid;
   grid-template-columns: 0.4fr 0.4fr;
@@ -27,14 +33,15 @@
   line-height: 0.8vh;
 }
 .profile .profile_items #profile_text .title {
-  font-size: 2vw;
+  font-size: 2.3vw;
   color: white;
 }
 .profile .profile_items #profile_text .title hr {
   color: white;
-  height: 0.11vw;
+  height: 0.12vw;
   opacity: 0.7;
-  margin-top: 0.3vh;
+  margin-top: auto;
+  margin-bottom: 0.61vw;
 }
 .profile .profile_items #profile_text .title .hr {
   margin-left: auto;
@@ -67,9 +74,8 @@
           text-decoration-line: underline;
 }
 .profile .profile_items button {
-  background: rgb(194, 169, 255);
   background: linear-gradient(90deg, rgb(194, 169, 255) 0%, rgb(117, 123, 242) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c2a9ff",endColorstr="#757bf2",GradientType=1);
+  background-size: 150% 150%;
   border: solid 0.2vw rgba(255, 255, 255, 0.9);
   border-radius: 5vw;
   color: white;
@@ -82,23 +88,61 @@
   position: sticky;
   top: 100vw;
 }
-@media (max-width: 1100px) {
-  .profile {
-    margin-left: 0;
-    margin-right: 0;
+
+@media (max-width: 1000px) {
+  body {
+    overflow: auto !important; /* important cuz profiles.js overrides it */
   }
   .profile .profile_items {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
+    grid-template-columns: 0.4fr;
   }
   .profile .profile_items #profile_text {
-    width: 25vw;
+    margin-left: 15vw;
+    margin-right: 10vw;
+    margin-bottom: 15vh;
+    width: 70vw;
+    height: 120vw;
+    border-width: 0.6vw;
   }
   .profile .profile_items #profile_text .title {
-    font-size: 1.7vw;
+    font-size: 6.3vw;
   }
-  .profile .profile_items img {
-    height: 50vh;
+  .profile .profile_items #profile_text .title hr {
+    color: white;
+    height: 0.28vw;
+    opacity: 0.7;
+    margin-top: auto;
+    margin-bottom: 1.61vw;
+  }
+  .profile .profile_items #profile_text .title .hr {
+    width: 50vw;
+  }
+  .profile .profile_items #profile_text .title .hr-small {
+    width: 35vw;
+  }
+  .profile .profile_items #profile_text div.content {
+    text-align: left;
+  }
+  .profile .profile_items #profile_text div.content .in-title {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 2vh;
+    margin-bottom: 0.7vh;
+    font-size: 5.22vw;
+  }
+  .profile .profile_items #profile_text div.content p {
+    color: white;
+    font-size: 4vw;
+    margin-bottom: 3vw;
+  }
+  .profile .profile_items #profile_text div.content p a {
+    color: rgb(215, 226, 255);
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+  }
+  .profile .profile_items button {
+    font-size: 4vw;
+    width: 30vw;
+    height: auto;
   }
 }/*# sourceMappingURL=profiles.css.map */

@@ -286,14 +286,24 @@ div.vtuber > div > h3 > a:hover {
     -o-transform: scale(0.9, 0.9); /* Opera */
     -moz-transform: scale(0.9, 0.9); /* Firefox */
   }
-  .vtubers .list .text h3 {
-    margin-top: -19px;
-  }
   .vtubers {
     padding-top: 20px;
     width: 800px;
     max-width: 100%;
     margin: 0 auto;
+  }
+  .vtubers .title {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+  }
+  .vtubers .title h1 {
+    margin: 5px 5px 0;
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5rem;
   }
   .vtubers .list {
     margin-top: -18.5px;
@@ -302,17 +312,7 @@ div.vtuber > div > h3 > a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .title {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-  }
-  .title h1 {
-    margin: 5px 5px 0;
-    color: var(--white);
-    font-weight: 700;
-    text-align: center;
-    font-size: 2.5rem;
+  .vtubers .list .text h3 {
+    margin-top: -19px;
   }
 }/*# sourceMappingURL=style.css.map */
