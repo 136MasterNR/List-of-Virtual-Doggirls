@@ -22,7 +22,7 @@
         position: relative;
 
         img {
-            height: 100vh
+            height: 100vh;
         }
 
         .profile_text {
@@ -61,7 +61,7 @@
                 }
             }
 
-            div.content {
+            .content {
                 text-align: left;
                 
                 .in-title {
@@ -85,6 +85,11 @@
                         color: rgb(215, 226, 255);
                         text-decoration-line: underline;
                     }
+                }
+
+                .social {
+                    grid-template-columns: 0.19fr 0.19fr;
+                    display: grid;
                 }
             }
         }
@@ -142,7 +147,7 @@
                 }
             }
 
-            div.content {
+            .content {
                 
                 .in-title {
                     margin-top: 2vh;
