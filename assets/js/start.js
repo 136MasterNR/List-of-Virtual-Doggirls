@@ -7,16 +7,16 @@ const setVisible = (elementOrSelector, visible) =>
 setVisible('#loading', true);
 
 document.addEventListener('DOMContentLoaded', () => {
-  let dog=searchParams.get('dog')
-  if (document.getElementById(dog.toLowerCase())) { transitionAlone(dog.toLowerCase()) } else {
-    document.querySelector('#vtubers').style.display = "block"
-    document.querySelector('#bottom').style.display = "block"
-    document.querySelector('#vtubers').style.animation="onscreenRev 0.75s ease-out 1"
-    document.querySelector('#bottom').style.animation="onscreenRev 0.75s ease-out 1"
+  let dog = searchParams.get('dog');
+  if (dog && document.getElementById(dog.toLowerCase())) { transitionAlone(dog.toLowerCase()) } else {
+    document.querySelector('#vtubers').style.display = "block";
+    document.querySelector('#bottom').style.display = "block";
+    document.querySelector('#vtubers').style.animation="onscreenRev 0.75s ease-out 1";
+    document.querySelector('#bottom').style.animation="onscreenRev 0.75s ease-out 1";
   }
-  document.querySelector('#loading').style.animation="fadeOut 0.12s ease-out forwards 1"
+  document.querySelector('#loading').style.animation="fadeOut 0.12s ease-out forwards 1";
   document.querySelector('#loading').addEventListener("animationend", function() {
-    document.querySelector('#loading').style.display="none"
+    document.querySelector('#loading').style.display="none";
   }, {
     once: true
   });
