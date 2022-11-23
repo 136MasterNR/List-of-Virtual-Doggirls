@@ -15,6 +15,7 @@ function transition(modal) {
     }, {
         once: true
     });
+    history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/doggirls/?dog=${modal}`)
     return false;
 }
 
