@@ -17,3 +17,8 @@
     from {transform: translateY(-500px); opacity: 0;}
     to {transform: translateY(0px); opacity: 1;}
 }
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
