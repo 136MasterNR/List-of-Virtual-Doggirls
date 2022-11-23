@@ -12,4 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#bottom').style.display = "block"
     document.querySelector('#bottom').style.animation="onscreenRev 0.75s ease-out 1"
     document.querySelector('#loading').style.animation="fadeOut 0.12s ease-out forwards 1"
+    document.querySelector('#loading').addEventListener("animationend", function() {
+      document.querySelector('#loading').style.display="none"
+    }, {
+      once: true
+  });
 });
