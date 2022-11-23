@@ -18,6 +18,14 @@ function transition(modal) {
     return false;
 }
 
+function transitionAlone(modal) {
+    let content=document.getElementById(modal)
+    document.getElementsByTagName("body")[0].style.overflow = "hidden"
+    content.style.display="block"
+    content.style.animation="onscreen 0.75s ease-out forwards 1";
+    return false;
+}
+
 function transitionOff(modal) {
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
@@ -36,7 +44,3 @@ function transitionOff(modal) {
     });
     return false;
 }
-
-/* Query String Locators */
-
-if (document.getElementById(searchParams.get('dog'))) { transition(searchParams.get('dog')) }
