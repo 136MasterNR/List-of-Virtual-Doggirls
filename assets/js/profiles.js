@@ -43,5 +43,6 @@ function transitionOff(modal) {
     }, {
         once: true
     });
+    history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/doggirls`)
     return false;
 }
