@@ -15,7 +15,7 @@ function transition(modal) {
     }, {
         once: true
     });
-    history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/doggirls/?dog=${modal}`)
+    history.pushState("bar", "Virtual Doggirls", `http://127.0.0.1:5500/?dog=${modal}`)
     return false;
 }
 
@@ -43,6 +43,10 @@ function transitionOff(modal) {
     }, {
         once: true
     });
-    history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/doggirls`)
+    try {
+        history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/doggirls`)
+    } catch(err) {
+        history.pushState("bar", "Virtual Doggirls", `http://127.0.0.1:5500`)
+    }
     return false;
 }

@@ -60,6 +60,9 @@
 .profile .profile_items .profile_text .content {
   text-align: left;
 }
+.profile .profile_items .profile_text .content snap.question {
+  border-radius: 100px;
+}
 .profile .profile_items .profile_text .content .in-title {
   font-family: "Concert One", cursive;
   color: white;
@@ -77,9 +80,13 @@
   font-size: 1vw;
 }
 .profile .profile_items .profile_text .content p a {
-  color: rgb(215, 226, 255);
+  color: rgb(212, 224, 255);
+  transition: color 125ms;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+.profile .profile_items .profile_text .content p a:hover {
+  color: rgb(232, 237, 255);
 }
 .profile .profile_items .profile_text .content .social {
   grid-template-columns: 0.19fr 0.19fr;

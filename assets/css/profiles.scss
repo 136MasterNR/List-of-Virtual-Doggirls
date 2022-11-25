@@ -67,6 +67,10 @@
             .content {
                 text-align: left;
                 
+                snap.question {
+                    border-radius: 100px;
+                }
+                
                 .in-title {
                     font-family: 'Concert One', cursive;
                     color: white;
@@ -85,8 +89,13 @@
                     font-size: 1vw;
 
                     a {
-                        color: rgb(215, 226, 255);
+                        color: rgb(212, 224, 255);
+                        transition: color 125ms;
                         text-decoration-line: underline;
+
+                        &:hover {
+                            color: rgb(232, 237, 255);
+                        }
                     }
                 }
 

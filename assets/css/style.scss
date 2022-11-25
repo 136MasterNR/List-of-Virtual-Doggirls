@@ -146,6 +146,10 @@ header a,a:hover {
         border-right: 1px solid white;
         border-bottom-left-radius: 1pc;
         border-bottom-right-radius: 1pc;
+
+        .text h3 a {
+            color: var(--white);
+        }
     }
 
     .list .vtuber {
@@ -186,10 +190,6 @@ header a,a:hover {
             border-radius: 50%;
         }
     }
-}
-
-.vtubers .list .text h3 a {
-    color: var(--white);
 }
 
 div.vtuber > div > h3 > a {
