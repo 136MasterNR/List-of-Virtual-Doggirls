@@ -66,8 +66,11 @@
 .profile .profile_items .profile_text .content .in-title {
   font-family: "Concert One", cursive;
   color: white;
-  margin-top: 4vh;
+  margin-top: 3.6vh;
   font-size: 1.22vw;
+}
+.profile .profile_items .profile_text .content .in-title.hashtags {
+  margin-top: 2.7vh;
 }
 .profile .profile_items .profile_text .content .special-text {
   margin-top: 1.3vw;

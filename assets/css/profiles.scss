@@ -74,8 +74,12 @@
                 .in-title {
                     font-family: 'Concert One', cursive;
                     color: white;
-                    margin-top: 4vh;
+                    margin-top: 3.6vh;
                     font-size: 1.22vw;
+
+                    &.hashtags {
+                        margin-top: 2.7vh;
+                    }
                 }
 
                 .special-text {

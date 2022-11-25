@@ -15,7 +15,11 @@ function transition(modal) {
     }, {
         once: true
     });
-    history.pushState("bar", "Virtual Doggirls", `http://127.0.0.1:5500/?dog=${modal}`)
+    try {
+        history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/?dog=${modal}`)
+    } catch(err) {
+        history.pushState("bar", "Virtual Doggirls", `http://127.0.0.1:5500/?dog=${modal}`)
+    }
     return false;
 }
 
