@@ -123,7 +123,7 @@
     margin-right: 10vw;
     margin-bottom: 15vh;
     width: 70vw;
-    height: 120vw;
+    height: 160vw;
     border-width: 0.6vw;
   }
   .profile .profile_items .profile_text .title {
@@ -165,5 +165,6 @@
     font-size: 4vw;
     width: 30vw;
     height: auto;
+    margin-top: 12vw;
   }
 }/*# sourceMappingURL=profiles.css.map */

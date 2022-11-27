@@ -16,7 +16,7 @@ function transition(modal) {
         once: true
     });
     try {
-        history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/?dog=${modal}`)
+        history.pushState("bar", "Virtual Doggirls", `https://136masternr.github.io/doggirls/?dog=${modal}`)
     } catch(err) {
         history.pushState("bar", "Virtual Doggirls", `http://127.0.0.1:5500/?dog=${modal}`)
     }
