@@ -46,6 +46,10 @@ img {
     -ms-user-select: none;
 }
 
+a.dotted {
+    text-decoration: dotted;
+}
+
 header a,a:hover {
     text-decoration: none;
     color: var(--white)

@@ -22,6 +22,9 @@
 .profile .profile_items img {
   height: 100vh;
 }
+.profile .profile_items small {
+  color: darkgray;
+}
 .profile .profile_items .profile_text {
   width: calc(150px + 20vw);
   border: 0.2vw solid rgb(255, 255, 255);
