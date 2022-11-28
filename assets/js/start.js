@@ -6,7 +6,7 @@ const setVisible = (elementOrSelector, visible) =>
 
 setVisible('#loading', true);
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   let dog = searchParams.get('dog');
   if (dog && document.getElementById(dog.toLowerCase())) { transitionAlone(dog.toLowerCase()) } else {
     document.querySelector('#vtubers').style.display = "block";
