@@ -1,4 +1,5 @@
-/* Enable Tooltips */ $('[data-toggle="tooltip"]').tooltip()
+/* Enable Tooltips */
+$('[data-toggle="tooltip"]').tooltip()
 
 /* Copy Function */
 function copy(link,profile) {
@@ -8,7 +9,7 @@ function copy(link,profile) {
             .attr('data-original-title', 'Copied!')
             .tooltip('show');
         setTimeout(
-            function() {
+            () => {
                 $(document.querySelector(`#${profile} .profile_items .profile_text .title snap`)).tooltip('hide')
                     .attr('data-original-title', 'Copy Profile Link')
         }, 2000);
