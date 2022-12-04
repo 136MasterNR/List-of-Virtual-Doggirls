@@ -23,7 +23,7 @@ h3 #icon .fa-youtube {
   color: rgb(255, 69, 69);
 }
 h3 #icon .fa-twitch {
-  color: #580ce4;
+  color: #5c0cf1;
 }
 h3 #icon .fa-tiktok {
   color: #111111;
@@ -39,6 +39,9 @@ h3 #icon .fa-instagram {
   top: 0.15em;
   right: 1px;
   position: relative;
+}
+h3 #icon .fa-bilibili {
+  color: #ffffff;
 }
 h3 #icon .fa-facebook {
   color: #78a5ff;
