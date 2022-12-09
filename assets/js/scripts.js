@@ -1,5 +1,8 @@
 /* Enable Tooltips */
-$('[data-toggle="tooltip"]').tooltip()
+$('[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    html: true
+});
 
 /* Copy Function */
 function copy(link,profile) {
