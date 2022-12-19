@@ -19,10 +19,10 @@ html {
     height: 100%;
     position: relative;
     user-select: text;
+    overflow-x: hidden;
 
     body {
         background: rgba(117,123,242,1);
-        overflow-x: hidden;
         max-width: 100%;
     }
 }
@@ -57,7 +57,10 @@ header a,a:hover {
 
 #bottom {
     display: none;
+    width: min-content;
     p {
+        display: inline-block;
+        width: min-content;
         position: relative;
         bottom: -15px;
         left: 44.2vw;
