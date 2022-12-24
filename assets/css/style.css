@@ -291,11 +291,11 @@ div.vtuber > div > h3 > a:hover {
 /* Auto Adjustment */
 @media (min-width: 2400px) {
   .vtubers .list {
-    margin-top: 137px;
+    margin-top: 168px;
   }
   #bottom p {
     font-size: 150%;
-    margin-top: 170px;
+    margin-top: 180px;
   }
   .vtubers .list,
 .vtubers .title {
