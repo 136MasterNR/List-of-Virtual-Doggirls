@@ -85,7 +85,7 @@ header a, a:hover {
   width: -moz-min-content;
   width: min-content;
   position: relative;
-  bottom: -15px;
+  bottom: -6.7px;
   left: 44.2vw;
   z-index: 5;
   color: var(--gray);
@@ -295,7 +295,7 @@ div.vtuber > div > h3 > a:hover {
   }
   #bottom p {
     font-size: 150%;
-    margin-top: 180px;
+    margin-top: 191px;
   }
   .vtubers .list,
 .vtubers .title {
