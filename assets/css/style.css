@@ -86,7 +86,7 @@ header a, a:hover {
   width: min-content;
   position: relative;
   bottom: -6.7px;
-  left: 44.2vw;
+  left: calc(50vw - 150px);
   z-index: 5;
   color: var(--gray);
   white-space: nowrap;

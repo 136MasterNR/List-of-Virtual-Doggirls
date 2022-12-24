@@ -139,6 +139,10 @@
     .profile .profile_items {
         grid-template-columns: 0.4fr;
 
+        img {
+            height: calc(170vw);
+        }
+
         .profile_text {
             margin-left: 15vw;
             margin-right: 10vw;

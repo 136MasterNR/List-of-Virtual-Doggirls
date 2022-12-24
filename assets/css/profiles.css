@@ -121,6 +121,9 @@
   .profile .profile_items {
     grid-template-columns: 0.4fr;
   }
+  .profile .profile_items img {
+    height: 170vw;
+  }
   .profile .profile_items .profile_text {
     margin-left: 15vw;
     margin-right: 10vw;
