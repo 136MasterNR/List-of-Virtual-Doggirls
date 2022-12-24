@@ -4,7 +4,7 @@
     opacity: 1;
   }
   to {
-    transform: translateY(-400px);
+    transform: translateY(-500px);
     opacity: 0;
   }
 }
@@ -14,7 +14,7 @@
     opacity: 1;
   }
   to {
-    transform: translateY(-400px);
+    transform: translateY(-500px);
     opacity: 0;
   }
 }

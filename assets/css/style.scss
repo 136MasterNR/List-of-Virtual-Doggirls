@@ -14,12 +14,26 @@
     background: rgb(194, 169, 255);
 }
 
+//Chrome Scrollbar
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+}
+
 html {
     min-height: 100%;
     height: 100%;
     position: relative;
     user-select: text;
     overflow-x: hidden;
+
+    // Firefox Scrollbar
+    scrollbar-color: lightgray transparent;
+    scrollbar-width: thin;
 
     body {
         background: rgba(117,123,242,1);
@@ -142,6 +156,7 @@ header a,a:hover {
             &:after { left: 100%; }
         }
     }
+
     .list {
         margin-top: -26px;
         text-align: center;
@@ -157,44 +172,46 @@ header a,a:hover {
         .text h3 a {
             color: var(--white);
         }
-    }
 
-    .list .vtuber {
-        margin: 15px;
-        text-align: left;
-        display: flex;
-        z-index: 1;
+        .vtuber {
+            margin: 15px;
+            text-align: left;
+            display: flex;
+            z-index: 1;
 
-        .text {
-            margin: 28px 15px 0;
+            .text {
+                margin: 28px 15px 0;
 
-            h3 {
-                font-weight: 700;
-                font-size: 1.5rem;
-                .name {
-                    cursor: pointer;
+                h3 {
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    .name {
+                        cursor: pointer;
+                    }
                 }
             }
-        }
 
-        .image img {
-            line-height: 110px;
-            text-align: center;
-            color: mediumpurple;
-            display: inline-block;
-            cursor: pointer;
-            width: 128px;
-            height: 128px;
-            min-width: 128px;
-            min-height: 128px;
-            border-radius: 2px;
-            border: 4px solid var(--white);
-            background: rgb(255,243,208);
-            background: -moz-linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
-            background: -webkit-linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
-            background: linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff3d0",endColorstr="#ffffff",GradientType=1); 
-            border-radius: 50%;
+            .image {
+                img {
+                    line-height: 110px;
+                    text-align: center;
+                    color: mediumpurple;
+                    display: inline-block;
+                    cursor: pointer;
+                    width: 128px;
+                    height: 128px;
+                    min-width: 128px;
+                    min-height: 128px;
+                    border-radius: 2px;
+                    border: 4px solid var(--white);
+                    background: rgb(255,243,208);
+                    background: -moz-linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
+                    background: -webkit-linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
+                    background: linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff3d0",endColorstr="#ffffff",GradientType=1); 
+                    border-radius: 50%;
+                }
+            }
         }
     }
 }
@@ -323,16 +340,17 @@ div.vtuber > div > h3 > a {
         border-bottom: 1px white;
         border-left: none;
         border-right: none;
+        
 
-            .vtuber {
+        .vtuber {
             margin: 0;
-            margin-left: -55px;
+            margin-left: -50px;
+            margin-right: -50px;
             text-align: center;
             display: block;
             z-index: 1;
 
             position: relative;
-            left: 25px;
 
             transform: scale(0.9, 0.9);
             -ms-transform: scale(0.9, 0.9); /* IE 9 */
