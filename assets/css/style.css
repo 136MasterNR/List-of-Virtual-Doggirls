@@ -307,6 +307,13 @@ div.vtuber > div > h3 > a:hover {
   }
 }
 @media (max-width: 800px) {
+  html {
+    scrollbar-color: unset;
+    scrollbar-width: auto;
+  }
+  body {
+    overflow: none;
+  }
   #bottom p {
     position: relative;
     top: 5px;

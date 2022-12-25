@@ -327,6 +327,16 @@ div.vtuber > div > h3 > a {
 }
 
 @media (max-width: 800px) {
+    html {
+        // Firefox Scrollbar
+        scrollbar-color: unset;
+        scrollbar-width: auto;
+    }
+
+    body {
+        overflow: none;
+    }
+
     #bottom p {
         position: relative;
         top: 5px;
