@@ -325,16 +325,29 @@ div.vtuber > div > h3 > a {
         -moz-transform: scale(1.4, 1.4); /* Firefox */
     }
 }
+@media (max-width: 1000px) {
+    html {
+        overflow: -moz-hidden-unscrollable;
+        overflow: hidden;
+    }
+
+    body {
+        // Firefox Scrollbar
+        scrollbar-color: lightgray transparent;
+        scrollbar-width: thin;
+    }
+}
+
 
 @media (max-width: 800px) {
-    html {
-        // Firefox Scrollbar
+    .area {
         scrollbar-color: unset;
         scrollbar-width: auto;
     }
 
-    body {
-        overflow: none;
+    ::-webkit-scrollbar {
+        width: 0em;
+        height: 0em;
     }
 
     #bottom p {
