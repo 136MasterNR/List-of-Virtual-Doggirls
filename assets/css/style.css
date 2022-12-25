@@ -320,6 +320,7 @@ div.vtuber > div > h3 > a:hover {
   .area {
     scrollbar-color: unset;
     scrollbar-width: auto;
+    overflow-x: hidden;
   }
   ::-webkit-scrollbar {
     width: 0em;
