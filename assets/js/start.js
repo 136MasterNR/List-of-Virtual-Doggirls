@@ -11,8 +11,8 @@ window.addEventListener('load', () => {
   if (dog && document.getElementById(dog.toLowerCase())) { transitionAlone(dog.toLowerCase()) } else {
     document.querySelector('#vtubers').style.display = "block";
     document.querySelector('#bottom').style.display = "block";
-    document.querySelector('#vtubers').style.animation="onscreenRev 0.75s ease-out 1";
-    document.querySelector('#bottom').style.animation="onscreenRev 0.75s ease-out 1";
+    document.querySelector('#vtubers').style.animation="firstOnScreen 0.75s ease-out 1";
+    document.querySelector('#bottom').style.animation="firstOnScreen 0.75s ease-out 1";
   }
   document.querySelector('#loading').style.animation="fadeOut 0.12s ease-out forwards 1";
   document.querySelector('#loading').addEventListener("animationend", function() {
