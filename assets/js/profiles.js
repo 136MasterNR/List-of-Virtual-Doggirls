@@ -17,14 +17,35 @@ function transition(modal) {
     });
     try {
         history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}`)
+        fetch('./doggirls.json')
+          .then(response => response.json())
+          .then(data => {
+            let dog = data.doggirls.find(dog => dog.username === modal);
+            document.title = `Virtual Doggirls - ${dog.name}`;
+          })
+          .catch(error => console.error(error));
     } catch(err) {
         history.pushState(null, null, `http://127.0.0.1:5500/?dog=${modal}`)
+        fetch('./doggirls.json')
+          .then(response => response.json())
+          .then(data => {
+            let dog = data.doggirls.find(dog => dog.username === modal);
+            document.title = `Virtual Doggirls - ${dog.name}`;
+          })
+          .catch(error => console.error(error));
     }
     return false;
 }
 
 function transitionAlone(modal) {
     let content=document.getElementById(modal)
+    fetch('./doggirls.json')
+      .then(response => response.json())
+      .then(data => {
+        let dog = data.doggirls.find(dog => dog.username === modal);
+        document.title = `Virtual Doggirls - ${dog.name}`;
+      })
+    .catch(error => console.error(error));
     document.getElementsByTagName("body")[0].style.overflow = "hidden"
     content.style.display="block"
     content.style.animation="onscreen 0.75s ease-out forwards 1";
@@ -35,6 +56,7 @@ function transitionOff(modal) {
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
+    document.title = `Virtual Doggirls`;
     content.style.animation="offscreenRev 0.75s ease-in forwards 1"
     content.addEventListener("animationend", () => {
         document.getElementsByTagName("body")[0].style.overflow = null
