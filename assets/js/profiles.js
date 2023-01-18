@@ -69,7 +69,7 @@ function transitionOff(modal) {
         content.style.display="none"
         let savedScrollPosition = sessionStorage.getItem("scrollPosition");
         if (savedScrollPosition) {
-            setTimeout(()=> window.scrollTo(0, savedScrollPosition), 450);
+            window.scrollTo({top: savedScrollPosition, behavior: 'instant'})
         }
     }, {
         once: true
