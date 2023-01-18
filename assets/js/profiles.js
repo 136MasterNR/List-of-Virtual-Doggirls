@@ -1,4 +1,5 @@
 function transition(modal) {
+    sessionStorage.setItem("scrollPosition", window.scrollY || document.documentElement.scrollTop);
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
@@ -66,6 +67,10 @@ function transitionOff(modal) {
         vtubers.style.animation="onscreenRev 0.75s ease-out forwards 1"
         bottom.style.animation="onscreenRev 0.75s ease-out forwards 1"
         content.style.display="none"
+        let savedScrollPosition = sessionStorage.getItem("scrollPosition");
+        if (savedScrollPosition) {
+            setTimeout(()=> window.scrollTo(0, savedScrollPosition), 450);
+        }
     }, {
         once: true
     });
