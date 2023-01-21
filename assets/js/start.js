@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
   }
   document.querySelector('#loading').style.animation="fadeOut 0.12s ease-out forwards 1";
   document.querySelector('#loading').addEventListener("animationend", function() {
+    window.scrollTo({top: 0, behavior: 'instant'});
     document.querySelector('#loading').style.display="none";
   }, {
     once: true
