@@ -49,7 +49,7 @@ function transitionAlone(modal) {
     .catch(error => console.error(error));
     document.getElementsByTagName("body")[0].style.overflow = "hidden"
     content.style.display="block"
-    content.style.animation="onscreen 0.75s ease-out forwards 1";
+    content.style.animation="firstOnScreen 0.75s ease-out forwards 1";
     return false;
 }
 
