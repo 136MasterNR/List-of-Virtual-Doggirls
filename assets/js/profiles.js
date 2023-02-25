@@ -16,25 +16,14 @@ function transition(modal) {
     }, {
         once: true
     });
-    try {
-        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}`)
-        fetch('./doggirls.json')
-          .then(response => response.json())
-          .then(data => {
-            let dog = data.doggirls.find(dog => dog.username === modal);
-            document.title = `Virtual Doggirls - ${dog.name}`;
-          })
-          .catch(error => console.error(error));
-    } catch(err) {
-        history.pushState(null, null, `http://127.0.0.1:5500/?dog=${modal}`)
-        fetch('./doggirls.json')
-          .then(response => response.json())
-          .then(data => {
-            let dog = data.doggirls.find(dog => dog.username === modal);
-            document.title = `Virtual Doggirls - ${dog.name}`;
-          })
-          .catch(error => console.error(error));
-    }
+    history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
+    fetch('./doggirls.json')
+      .then(response => response.json())
+      .then(data => {
+      let dog = data.doggirls.find(dog => dog.username === modal);
+      document.title = `Virtual Doggirls - ${dog.name}`;
+    })
+    .catch(error => console.error(error));
     return false;
 }
 
@@ -77,7 +66,7 @@ function transitionOff(modal) {
     try {
         history.pushState(null, null, `https://136masternr.github.io/doggirls`)
     } catch(err) {
-        history.pushState(null, null, `http://127.0.0.1:5500`)
+        history.pushState(null, null, `${location.protocol}//${location.host}`)
     }
     return false;
 }

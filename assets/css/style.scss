@@ -164,7 +164,7 @@ header a,a:hover {
         text-align: center;
         padding-top: 15px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(calc(100% / 3 - 20px), 1fr));
         border-bottom: 1px solid white;
         border-left: 1px solid white;
         border-right: 1px solid white;
