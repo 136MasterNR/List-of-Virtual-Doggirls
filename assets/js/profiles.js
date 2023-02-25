@@ -16,7 +16,11 @@ function transition(modal) {
     }, {
         once: true
     });
-    history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
+    try {
+        history.pushState(null, null, `${location.protocol}//${location.host}/doggirls/?dog=${modal}`)
+    } catch(err) {
+        history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
+    }
     fetch('./doggirls.json')
       .then(response => response.json())
       .then(data => {
