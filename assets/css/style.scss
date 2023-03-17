@@ -309,24 +309,6 @@ div.vtuber > div > h3 > a {
 }
 
 /* Auto Adjustment */
-
-@media (min-width: 2400px) {
-    .vtubers .list {
-        margin-top: 168px;
-    }
-    #bottom p {
-        font-size: 150%;
-        margin-top: 191px;
-    }
-    .vtubers .list,
-    .vtubers .title {
-        transform: scale(1.4, 1.4);
-        -ms-transform: scale(1.4, 1.4); /* IE 9 */
-        -webkit-transform: scale(1.4, 1.4); /* Safari and Chrome */
-        -o-transform: scale(1.4, 1.4); /* Opera */
-        -moz-transform: scale(1.4, 1.4); /* Firefox */
-    }
-}
 @media (max-width: 1000px) {
     html {
         overflow: -moz-hidden-unscrollable;
