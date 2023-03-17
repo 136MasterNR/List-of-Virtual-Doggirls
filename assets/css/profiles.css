@@ -6,10 +6,10 @@
   max-width: 100%;
 }
 .profile p {
-  margin-bottom: 0.75vw;
+  margin-bottom: 12.75px;
 }
 .profile h4 {
-  margin-bottom: 0.5vw;
+  margin-bottom: 10px;
 }
 .profile .profile_items {
   margin-left: auto;
@@ -20,45 +20,45 @@
   position: relative;
 }
 .profile .profile_items img {
-  height: 100vh;
+  height: 929.9px;
 }
 .profile .profile_items small {
   color: darkgray;
 }
 .profile .profile_items .profile_text {
-  width: calc(150px + 20vw);
-  border: 0.2vw solid rgb(255, 255, 255);
+  width: 500px;
+  border: 3px solid rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 9% 9% 9% 9%;
-  padding: 1vw;
-  margin-top: 7.5vh;
-  margin-bottom: 7.5vh;
-  line-height: 0.8vh;
+  padding: 17px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  line-height: 8.1px;
 }
 .profile .profile_items .profile_text .title {
   font-family: "Acme", sans-serif;
-  font-size: 2.4vw;
+  font-size: 40px;
   color: white;
-  margin-left: 2.3vw;
+  margin-left: 35px;
 }
 .profile .profile_items .profile_text .title hr {
   position: relative;
   color: white;
-  height: 0.12vw;
+  height: 2px;
   opacity: 0.7;
   margin-top: auto;
-  margin-bottom: 0.61vw;
-  right: 1.2vw;
+  margin-bottom: 10px;
+  right: 18px;
 }
 .profile .profile_items .profile_text .title .hr {
   margin-left: auto;
   margin-right: auto;
-  width: 20vw;
+  width: 350px;
 }
 .profile .profile_items .profile_text .title .hr-small {
   margin-left: auto;
   margin-right: auto;
-  width: 15vw;
+  width: 250px;
 }
 .profile .profile_items .profile_text .content {
   text-align: left;
@@ -69,21 +69,21 @@
 .profile .profile_items .profile_text .content .in-title {
   font-family: "Concert One", cursive;
   color: white;
-  margin-top: 3.6vh;
-  font-size: 1.22vw;
+  margin-top: 35px;
+  font-size: 22px;
 }
 .profile .profile_items .profile_text .content .in-title.hashtags {
-  margin-top: 2.7vh;
+  margin-top: 25px;
 }
 .profile .profile_items .profile_text .content .special-text {
-  margin-top: 1.3vw;
-  font-size: 0.9vw;
+  margin-top: 23px;
+  font-size: 15px;
 }
 .profile .profile_items .profile_text .content p {
   margin-left: 0;
   margin-right: 0;
   color: white;
-  font-size: 1vw;
+  font-size: 18px;
 }
 .profile .profile_items .profile_text .content p a {
   color: rgb(212, 224, 255);
@@ -100,16 +100,16 @@
 .profile .profile_items button {
   background: linear-gradient(90deg, rgb(194, 169, 255) 0%, rgb(117, 123, 242) 100%);
   background-size: 150% 150%;
-  border: solid 0.2vw rgba(255, 255, 255, 0.9);
-  border-radius: 5vw;
+  border: solid 3px rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
   color: white;
-  padding: 1.6vh 2vw;
+  padding: 14px 37px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 1vw;
+  font-size: 18px;
   position: sticky;
-  top: 100vw;
+  top: 100%;
 }
 
 @media (max-width: 1000px) {
@@ -120,7 +120,7 @@
     grid-template-columns: 0.4fr;
   }
   .profile .profile_items img {
-    height: 170vw;
+    height: 629.9px;
   }
   .profile .profile_items .profile_text {
     margin-left: 15vw;
@@ -166,8 +166,8 @@
   }
   .profile .profile_items button {
     font-size: 4vw;
-    width: 30vw;
-    height: auto;
-    margin-top: 12vw;
+    width: 35vw;
+    height: 15vw;
+    top: 100%;
   }
 }/*# sourceMappingURL=profiles.css.map */

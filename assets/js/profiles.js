@@ -7,7 +7,7 @@ function transition(modal) {
     bottom.style.animation="offscreen 0.75s ease-in forwards 1";
     vtubers.addEventListener("animationend", () => {
         bottom.style.display="none"
-        document.getElementsByTagName("body")[0].style.overflow = "hidden"
+        document.getElementsByTagName("body")[0].style.overflow = null
         content.style.display="block"
         vtubers.style.animation=null;
         bottom.style.animation=null;
@@ -17,7 +17,7 @@ function transition(modal) {
         once: true
     });
     try {
-        history.pushState(null, null, `${location.protocol}//${location.host}/doggirls/?dog=${modal}`)
+        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}`)
     } catch(err) {
         history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
     }
@@ -40,7 +40,7 @@ function transitionAlone(modal) {
         document.title = `Virtual Doggirls - ${dog.name}`;
       })
     .catch(error => console.error(error));
-    document.getElementsByTagName("body")[0].style.overflow = "hidden"
+    document.getElementsByTagName("body")[0].style.overflow = null
     content.style.display="block"
     content.style.animation="firstOnScreen 0.75s ease-out forwards 1";
     return false;
