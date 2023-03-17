@@ -1,17 +1,20 @@
+const screenWidth = window.innerWidth;
+const animationDuration = screenWidth < 500 ? '0.5s' : '0.75s';
+
 function transition(modal) {
     sessionStorage.setItem("scrollPosition", window.scrollY || document.documentElement.scrollTop);
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
-    vtubers.style.animation="offscreen 0.75s ease-in forwards 1";
-    bottom.style.animation="offscreen 0.75s ease-in forwards 1";
+    vtubers.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
+    bottom.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
     vtubers.addEventListener("animationend", () => {
         bottom.style.display="none"
         document.getElementsByTagName("body")[0].style.overflow = null
         content.style.display="block"
         vtubers.style.animation=null;
         bottom.style.animation=null;
-        content.style.animation="onscreen 0.75s ease-out forwards 1";
+        content.style.animation=`onscreen ${animationDuration} ease-out forwards 1`;
         vtubers.style.display="none"
     }, {
         once: true
@@ -51,14 +54,14 @@ function transitionOff(modal) {
     let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
     document.title = `Virtual Doggirls`;
-    content.style.animation="offscreenRev 0.75s ease-in forwards 1"
+    content.style.animation=`offscreenRev ${animationDuration} ease-in forwards 1`
     content.addEventListener("animationend", () => {
         document.getElementsByTagName("body")[0].style.overflow = null
         bottom.style.display="block"
         vtubers.style.display="block"
         content.style.animation=null
-        vtubers.style.animation="onscreenRev 0.75s ease-out forwards 1"
-        bottom.style.animation="onscreenRev 0.75s ease-out forwards 1"
+        vtubers.style.animation=`onscreenRev ${animationDuration} ease-out forwards 1`
+        bottom.style.animation=`onscreenRev ${animationDuration} ease-out forwards 1`
         content.style.display="none"
         let savedScrollPosition = sessionStorage.getItem("scrollPosition");
         if (savedScrollPosition) {
