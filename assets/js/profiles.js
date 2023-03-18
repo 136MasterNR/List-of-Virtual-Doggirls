@@ -1,8 +1,12 @@
 const screenWidth = window.innerWidth;
 const animationDuration = screenWidth < 500 ? '0.5s' : '0.75s';
+let profileImg = document.querySelector('.profile .profile_items .profile_img img');
+
+// Wait for the page to finish loading before adding the image loading event listener
 
 function transition(modal) {
     sessionStorage.setItem("scrollPosition", window.scrollY || document.documentElement.scrollTop);
+    const img = document.querySelector('.profile_img img');
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
@@ -11,11 +15,18 @@ function transition(modal) {
     vtubers.addEventListener("animationend", () => {
         bottom.style.display="none"
         document.getElementsByTagName("body")[0].style.overflow = null
-        content.style.display="block"
         vtubers.style.animation=null;
         bottom.style.animation=null;
-        content.style.animation=`onscreen ${animationDuration} ease-out forwards 1`;
         vtubers.style.display="none"
+        if (profileImg.complete) {
+            content.style.animation=`onscreen ${animationDuration} ease-out forwards 1`;
+        } else {
+            profileImg.addEventListener('load', function() {
+              content.style.animation=`onscreen ${animationDuration} ease-out forwards 1`;
+            });
+        }
+        content.style.display="block"
+        content.style.animation=`onscreen ${animationDuration} ease-out forwards 1`;
     }, {
         once: true
     });
