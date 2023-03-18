@@ -20,7 +20,8 @@
   position: relative;
 }
 .profile .profile_items img {
-  height: 929.9px;
+  height: 100vh;
+  min-height: 815px;
 }
 .profile .profile_items small {
   color: darkgray;

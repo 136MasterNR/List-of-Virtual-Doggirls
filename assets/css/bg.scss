@@ -1,14 +1,14 @@
 .area{
-    background: rgb(147,128,231);
-    background: -moz-linear-gradient(180deg, rgba(147,128,231,1) 0%, rgba(117,123,242,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(147,128,231,1) 0%, rgba(117,123,242,1) 100%);
-    background: linear-gradient(180deg, rgba(147,128,231,1) 0%, rgba(117,123,242,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9380e7",endColorstr="#757bf2",GradientType=1); 
     width: 100vw;
     height: 100vh;
     min-height: 100%;
 
     .circles{
+        background: var(--blurple);
+        background: -moz-linear-gradient(180deg, var(--purple) 0%, var(--blurple) 100%);
+        background: -webkit-linear-gradient(180deg, var(--purple) 0%, var(--blurple) 100%);
+        background: linear-gradient(180deg, var(--purple) 0%, var(--blurple) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9380e7",endColorstr="#757bf2",GradientType=1);
         position: fixed;
         top: 0;
         left: 0;
@@ -16,7 +16,7 @@
         height: 100%;
         min-height: 100%;
         overflow: hidden;
-        z-index: 0;
+        z-index: -1;
         
         li {
             position: absolute;

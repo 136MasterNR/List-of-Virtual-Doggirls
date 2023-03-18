@@ -4,10 +4,10 @@
 }
 
 :root {
+  --blurple: rgba(117,123,242,1);
+  --purple: rgb(147,128,231);
   --gray: #cfcfcf;
   --white: #f0f0f0;
-  --blue: #2b87d3;
-  --black: #161c21;
 }
 
 ::-moz-selection {
@@ -39,7 +39,7 @@ html {
   scrollbar-width: thin;
 }
 html body {
-  background: rgb(117, 123, 242);
+  background: var(--blurple);
   max-width: 100%;
 }
 
