@@ -111,6 +111,7 @@
   font-size: 18px;
   position: sticky;
   top: 100%;
+  white-space: nowrap;
 }
 
 @media (max-width: 1000px) {
@@ -121,7 +122,10 @@
     grid-template-columns: 0.4fr;
   }
   .profile .profile_items img {
-    height: 629.9px;
+    min-width: 100px;
+    width: 100vw;
+    height: auto;
+    min-height: auto;
   }
   .profile .profile_items .profile_text {
     margin-left: 15vw;
@@ -139,7 +143,8 @@
     height: 0.28vw;
     opacity: 0.7;
     margin-top: auto;
-    margin-bottom: 1.61vw;
+    margin-bottom: 1.8vw;
+    right: 3vw;
   }
   .profile .profile_items .profile_text .title .hr {
     width: 50vw;
