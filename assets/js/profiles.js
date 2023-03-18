@@ -10,6 +10,11 @@ function transition(modal) {
     let bottom=document.getElementById('bottom')
     vtubers.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
     bottom.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
+    const transitionFinalize = function() {
+      document.querySelector('#loading').style.display="none";
+      content.style.display = "block";
+      content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
+    }
     vtubers.addEventListener("animationend", () => {
         bottom.style.display="none"
         document.getElementsByTagName("body")[0].style.overflow = null
@@ -18,19 +23,18 @@ function transition(modal) {
         vtubers.style.display="none"
         let profileImg = document.querySelector(`#${modal}.profile .profile_items .profile_img img`);
         if (profileImg) {
+          document.querySelector('#loading').style.display="block";
+          document.querySelector('#loading').style.animation="fadeIn 0.36s ease-out forwards 1";
           let img = new Image();
           img.src = profileImg.getAttribute('src');
           img.addEventListener('load', () => {
-            content.style.display = "block";
-            content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
+            transitionFinalize()
           });
-          img.addEventListener('error', (err) => {
-            content.style.display = "block";
-            content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
+          img.addEventListener('error', () => {
+            transitionFinalize()
           });
         } else {
-          content.style.display = "block";
-          content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
+          transitionFinalize()
         }
           
     }, {
