@@ -140,8 +140,8 @@ header a, a:hover {
   display: inline-block;
   vertical-align: baseline;
   zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
+  display: inline;
+  vertical-align: auto;
   position: relative;
   padding: 0 20px;
 }
