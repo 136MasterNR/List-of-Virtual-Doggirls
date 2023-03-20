@@ -22,6 +22,7 @@
 .profile .profile_items img {
   height: 100vh;
   min-height: 815px;
+  max-height: 1000px;
 }
 .profile .profile_items small {
   color: darkgray;
@@ -112,6 +113,14 @@
   position: sticky;
   top: 100%;
   white-space: nowrap;
+  transition: font-size 0.1s ease-in-out;
+}
+.profile .profile_items button:focus, .profile .profile_items button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+.profile .profile_items button:hover {
+  font-size: 19px;
 }
 
 @media (max-width: 1000px) {
@@ -122,10 +131,12 @@
     grid-template-columns: 0.4fr;
   }
   .profile .profile_items img {
-    min-width: 100px;
-    width: 100vw;
+    margin-left: 5%;
+    max-width: 100vw;
+    width: auto;
     height: auto;
-    min-height: auto;
+    min-height: none;
+    max-height: 1200px;
   }
   .profile .profile_items .profile_text {
     margin-left: 15vw;

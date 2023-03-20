@@ -24,6 +24,7 @@
         img {
             height: 100vh;
             min-height: 815px;
+            max-height: 1000px;
         }
         
         small {
@@ -130,6 +131,15 @@
             position: sticky;
             top: 100%;
             white-space: nowrap;
+            &:focus, &:active {
+                outline: none !important; // Overrides bootstrap
+                box-shadow: none;
+             }
+
+            transition: font-size 0.1s ease-in-out;
+            &:hover {
+                font-size: 19px;
+            }
         }
     }
 }
@@ -143,10 +153,12 @@
         grid-template-columns: 0.4fr;
 
         img {
-            min-width: 100px;
-            width: 100vw;
+            margin-left: 5%;
+            max-width: 100vw;
+            width: auto;
             height: auto;
-            min-height: auto;
+            min-height: none;
+            max-height: 1200px;
         }
 
         .profile_text {
