@@ -131,12 +131,13 @@
     grid-template-columns: 0.4fr;
   }
   .profile .profile_items img {
-    margin-left: 5%;
+    margin-left: 1%;
+    min-width: auto;
     max-width: 100vw;
+    min-height: auto;
+    max-height: 1200px;
     width: auto;
     height: auto;
-    min-height: none;
-    max-height: 1200px;
   }
   .profile .profile_items .profile_text {
     margin-left: 15vw;
