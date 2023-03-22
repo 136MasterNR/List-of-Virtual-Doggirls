@@ -8,4 +8,5 @@ if (urlParams.has('dog')) {
   // Set the Open Graph tags based on the "dog" parameter
   document.querySelector('meta[property="og:description"]').setAttribute('content', `Description for ${dog}`);
   document.querySelector('meta[property="og:image"]').setAttribute('content', `https://136masternr.github.io/doggirls/assets/img/${dog}.png`);
+  document.querySelector('meta[property="twitter:image"]').setAttribute('content', `https://136masternr.github.io/doggirls/assets/img/${dog}.png`);
 }
