@@ -98,3 +98,49 @@ function transitionOff(modal) {
     }
     return false;
 }
+
+function page(modal, page, btn) {
+  let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
+
+  let pagePathDisplay = window.getComputedStyle(pagePath).getPropertyValue('display');
+  if (pagePathDisplay === 'block') {
+    return;
+  }
+
+  btn.disabled = true;
+
+  let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav button`);
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+  }
+
+  btn.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+
+  let parentDiv = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text`);
+  let childDivs = parentDiv.children;
+
+  for (let i = 0; i < childDivs.length; i++) {
+    if (childDivs[i].tagName === 'DIV') {
+      childDivs[i].style.opacity = '0';
+      childDivs[i].style.transition = 'opacity 0.3s';
+    }
+  }
+
+  setTimeout(() => {
+    for (let i = 0; i < childDivs.length; i++) {
+      if (childDivs[i].tagName === 'DIV' && childDivs[i] !== pagePath) {
+        childDivs[i].style.display = 'none';
+      }
+    }
+
+    pagePath.style.display = 'block';
+    pagePath.style.opacity = '0';
+
+    setTimeout(() => {
+      pagePath.style.opacity = '1';
+      pagePath.style.transition = 'opacity 0.3s';
+
+      btn.disabled = false;
+    }, 35);
+  }, 200);
+}
