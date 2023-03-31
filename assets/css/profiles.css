@@ -128,6 +128,9 @@
 .profile .profile_items .profile_about .profile_text .content, .profile .profile_items .profile_about .profile_text .credits, .profile .profile_items .profile_about .profile_text .contact, .profile .profile_items .profile_about .profile_text .character {
   text-align: left;
 }
+.profile .profile_items .profile_about .profile_text .content div.p p, .profile .profile_items .profile_about .profile_text .credits div.p p, .profile .profile_items .profile_about .profile_text .contact div.p p, .profile .profile_items .profile_about .profile_text .character div.p p {
+  margin-bottom: 10px;
+}
 .profile .profile_items .profile_about .profile_text .content snap.question, .profile .profile_items .profile_about .profile_text .credits snap.question, .profile .profile_items .profile_about .profile_text .contact snap.question, .profile .profile_items .profile_about .profile_text .character snap.question {
   border-radius: 100px;
 }
