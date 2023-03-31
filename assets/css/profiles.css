@@ -89,7 +89,7 @@
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 9% 9% 9% 9%;
   padding: 17px;
-  line-height: 8.1px;
+  line-height: 20px;
   min-height: 750px;
   max-height: 850px;
 }
@@ -98,6 +98,7 @@
   font-size: 40px;
   color: white;
   margin-left: 35px;
+  margin-bottom: 35px;
 }
 .profile .profile_items .profile_about .profile_text .title hr {
   position: relative;
@@ -133,21 +134,21 @@
 .profile .profile_items .profile_about .profile_text .content .in-title, .profile .profile_items .profile_about .profile_text .credits .in-title, .profile .profile_items .profile_about .profile_text .contact .in-title, .profile .profile_items .profile_about .profile_text .character .in-title {
   font-family: "Concert One", cursive;
   color: white;
-  margin-top: 35px;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 5px;
   font-size: 22px;
 }
-.profile .profile_items .profile_about .profile_text .content .in-title.hashtags, .profile .profile_items .profile_about .profile_text .credits .in-title.hashtags, .profile .profile_items .profile_about .profile_text .contact .in-title.hashtags, .profile .profile_items .profile_about .profile_text .character .in-title.hashtags {
-  margin-top: 25px;
-}
 .profile .profile_items .profile_about .profile_text .content .special-text, .profile .profile_items .profile_about .profile_text .credits .special-text, .profile .profile_items .profile_about .profile_text .contact .special-text, .profile .profile_items .profile_about .profile_text .character .special-text {
-  margin-top: 23px;
+  margin: 0;
+  margin-top: 10px;
   font-size: 15px;
 }
 .profile .profile_items .profile_about .profile_text .content p, .profile .profile_items .profile_about .profile_text .credits p, .profile .profile_items .profile_about .profile_text .contact p, .profile .profile_items .profile_about .profile_text .character p {
-  margin-left: 0;
-  margin-right: 0;
   color: white;
   font-size: 18px;
+  margin: 0;
+  margin-bottom: 1px;
 }
 .profile .profile_items .profile_about .profile_text .content p a, .profile .profile_items .profile_about .profile_text .credits p a, .profile .profile_items .profile_about .profile_text .contact p a, .profile .profile_items .profile_about .profile_text .character p a {
   color: rgb(212, 224, 255);
@@ -157,12 +158,11 @@
 .profile .profile_items .profile_about .profile_text .content p a:hover, .profile .profile_items .profile_about .profile_text .credits p a:hover, .profile .profile_items .profile_about .profile_text .contact p a:hover, .profile .profile_items .profile_about .profile_text .character p a:hover {
   color: rgb(232, 237, 255);
 }
-.profile .profile_items .profile_about .profile_text .content .social, .profile .profile_items .profile_about .profile_text .credits .social, .profile .profile_items .profile_about .profile_text .contact .social, .profile .profile_items .profile_about .profile_text .character .social {
-  grid-template-columns: 0.19fr 0.19fr;
+.profile .profile_items .profile_about .profile_text .content .social {
+  grid-template-columns: repeat(2, 0.19fr);
   display: grid;
-}
-.profile .profile_items .profile_about .profile_text .character .description {
-  line-height: 20px;
+  grid-column-gap: 5px;
+  grid-row-gap: 0;
 }
 .profile .profile_items .profile_about .profile_text button {
   background: linear-gradient(90deg, rgb(194, 169, 255) 0%, rgb(117, 123, 242) 100%);
@@ -225,7 +225,6 @@
   .profile .profile_items .profile_about .profile_text {
     padding-right: 5px !important;
     padding-left: 14px !important;
-    line-height: 1.4vw !important;
   }
   .profile .profile_items .profile_about .profile_text .title {
     padding-right: 10px !important;
@@ -249,6 +248,5 @@
   }
   .profile .profile_items .profile_about .profile_text .content .special-text {
     font-size: 15px !important;
-    line-height: 15px;
   }
 }/*# sourceMappingURL=profiles.css.map */
