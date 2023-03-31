@@ -56,18 +56,34 @@ function transition(modal) {
 }
 
 function transitionAlone(modal) {
-    let content=document.getElementById(modal)
-    fetch('./doggirls.json')
-      .then(response => response.json())
-      .then(data => {
-        let dog = data.doggirls.find(dog => dog.username === modal);
-        document.title = `Virtual Doggirls - ${dog.name}`;
-      })
-    .catch(error => console.error(error));
-    document.getElementsByTagName("body")[0].style.overflow = null
-    content.style.display="block"
-    content.style.animation="firstOnScreen 0.75s ease-out forwards 1";
-    return false;
+  let content=document.getElementById(modal)
+  fetch('./doggirls.json')
+    .then(response => response.json())
+    .then(data => {
+      let dog = data.doggirls.find(dog => dog.username === modal);
+      document.title = `Virtual Doggirls - ${dog.name}`;
+    })
+  .catch(error => console.error(error));
+  document.getElementsByTagName("body")[0].style.overflow = null
+  content.style.display="block"
+  content.style.animation="firstOnScreen 0.75s ease-out forwards 1";
+  let page = searchParams.get('page');
+  if (page) {
+    page=page.toLowerCase()
+    let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
+    if (pagePath) {
+      document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .content`).style.display = "none";
+      let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper button`);
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+      }
+      document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper .${page}`).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+      console.log(pagePath)
+      pagePath.style.display = 'block';
+      pagePath.style.opacity = '1';
+    }
+  }
+  return false;
 }
 
 function transitionOff(modal) {
@@ -100,11 +116,26 @@ function transitionOff(modal) {
 }
 
 function page(modal, page, btn) {
+
   let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
 
   let pagePathDisplay = window.getComputedStyle(pagePath).getPropertyValue('display');
   if (pagePathDisplay === 'block') {
     return;
+  }
+
+  if (page!="content") {
+    try {
+        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}&page=${page}`)
+    } catch(err) {
+        history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}&page=${page}`)
+    }
+  } else {
+    try {
+        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}`)
+    } catch(err) {
+        history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
+    }
   }
 
   btn.disabled = true;
