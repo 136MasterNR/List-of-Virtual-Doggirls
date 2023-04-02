@@ -11,9 +11,9 @@ function transition(modal) {
     vtubers.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
     bottom.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
     const transitionFinalize = function() {
-      document.querySelector('#loading').style.display="none";
-      content.style.display = "block";
-      content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
+        document.querySelector('#loading').style.display="none";
+        content.style.display = "block";
+        content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
     }
     vtubers.addEventListener("animationend", () => {
         bottom.style.display="none"
@@ -23,67 +23,67 @@ function transition(modal) {
         vtubers.style.display="none"
         let profileImg = document.querySelector(`#${modal}.profile .profile_items .profile_img img`);
         if (profileImg) {
-          document.querySelector('#loading').style.display="block";
-          document.querySelector('#loading').style.animation="fadeIn 0.36s ease-out forwards 1";
-          let img = new Image();
-          img.src = profileImg.getAttribute('src');
-          img.addEventListener('load', () => {
-            transitionFinalize()
-          });
-          img.addEventListener('error', () => {
-            transitionFinalize()
-          });
+            document.querySelector('#loading').style.display="block";
+            document.querySelector('#loading').style.animation="fadeIn 0.36s ease-out forwards 1";
+            let img = new Image();
+            img.src = profileImg.getAttribute('src');
+            img.addEventListener('load', () => {
+                transitionFinalize()
+            });
+            img.addEventListener('error', () => {
+                transitionFinalize()
+            });
         } else {
-          transitionFinalize()
+            transitionFinalize()
         }
           
     }, {
         once: true
     });
     try {
-        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}`)
-    } catch(err) {
         history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
+    } catch(err) {
+        console.log("%c\u26A0 %cUnable to pushState... Are you on the right domain?", "color: orange; font-size: 20px;", "color: red; font-size: 19px; font-weight: bold");
     }
     fetch('./doggirls.json')
-      .then(response => response.json())
-      .then(data => {
-      let dog = data.doggirls.find(dog => dog.username === modal);
-      document.title = `Virtual Doggirls - ${dog.name}`;
+        .then(response => response.json())
+        .then(data => {
+        let dog = data.doggirls.find(dog => dog.username === modal);
+        document.title = `Virtual Doggirls - ${dog.name}`;
     })
     .catch(error => console.error(error));
     return false;
 }
 
 function transitionAlone(modal) {
-  let content=document.getElementById(modal)
-  fetch('./doggirls.json')
-    .then(response => response.json())
-    .then(data => {
-      let dog = data.doggirls.find(dog => dog.username === modal);
-      document.title = `Virtual Doggirls - ${dog.name}`;
-    })
-  .catch(error => console.error(error));
-  document.getElementsByTagName("body")[0].style.overflow = null
-  content.style.display="block"
-  content.style.animation="firstOnScreen 0.75s ease-out forwards 1";
-  let page = searchParams.get('page');
-  if (page) {
-    page=page.toLowerCase()
-    let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
-    if (pagePath) {
-      document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .content`).style.display = "none";
-      let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper button`);
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-      }
-      document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper .${page}`).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-      console.log(pagePath)
-      pagePath.style.display = 'block';
-      pagePath.style.opacity = '1';
+    let content=document.getElementById(modal)
+    fetch('./doggirls.json')
+        .then(response => response.json())
+        .then(data => {
+            let dog = data.doggirls.find(dog => dog.username === modal);
+            document.title = `Virtual Doggirls - ${dog.name}`;
+        })
+    .catch(error => console.error(error));
+    document.getElementsByTagName("body")[0].style.overflow = null
+    content.style.display="block"
+    content.style.animation="firstOnScreen 0.75s ease-out forwards 1";
+    let page = searchParams.get('page');
+    if (page) {
+        page=page.toLowerCase()
+        let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
+        if (pagePath) {
+            document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .content`).style.display = "none";
+            let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper button`);
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+            }
+            document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper .${page}`).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+            console.log(pagePath)
+            pagePath.style.display = 'block';
+            pagePath.style.opacity = '1';
+        }
     }
-  }
-  return false;
+    return false;
 }
 
 function transitionOff(modal) {
@@ -107,71 +107,59 @@ function transitionOff(modal) {
     }, {
         once: true
     });
-    try {
-        history.pushState(null, null, `https://136masternr.github.io/doggirls`)
-    } catch(err) {
-        history.pushState(null, null, `${location.protocol}//${location.host}`)
-    }
+    history.pushState(null, null, `${location.protocol}//${location.host}`)
     return false;
 }
 
 function page(modal, page, btn) {
 
-  let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
+    let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
 
-  let pagePathDisplay = window.getComputedStyle(pagePath).getPropertyValue('display');
-  if (pagePathDisplay === 'block') {
-    return;
-  }
-
-  if (page!="content") {
-    try {
-        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}&page=${page}`)
-    } catch(err) {
-        history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}&page=${page}`)
+    let pagePathDisplay = window.getComputedStyle(pagePath).getPropertyValue('display');
+    if (pagePathDisplay === 'block') {
+        return;
     }
-  } else {
-    try {
-        history.pushState(null, null, `https://136masternr.github.io/doggirls/?dog=${modal}`)
-    } catch(err) {
+
+    if (page!="content") {
+        history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}&page=${page}`)
+    } else {
         history.pushState(null, null, `${location.protocol}//${location.host}/?dog=${modal}`)
     }
-  }
 
-  btn.disabled = true;
+    btn.disabled = true;
 
-  let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav button`);
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-  }
-
-  btn.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-
-  let parentDiv = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text`);
-  let childDivs = parentDiv.children;
-
-  for (let i = 0; i < childDivs.length; i++) {
-    if (childDivs[i].tagName === 'DIV') {
-      childDivs[i].style.opacity = '0';
-      childDivs[i].style.transition = 'opacity 0.3s';
+    let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav button`);
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
     }
-  }
 
-  setTimeout(() => {
+    btn.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+
+    let parentDiv = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text`);
+    let childDivs = parentDiv.children;
+
     for (let i = 0; i < childDivs.length; i++) {
-      if (childDivs[i].tagName === 'DIV' && childDivs[i] !== pagePath) {
-        childDivs[i].style.display = 'none';
-      }
+        if (childDivs[i].tagName === 'DIV') {
+        childDivs[i].style.opacity = '0';
+        childDivs[i].style.transition = 'opacity 0.3s';
+        }
     }
-
-    pagePath.style.display = 'block';
-    pagePath.style.opacity = '0';
 
     setTimeout(() => {
-      pagePath.style.opacity = '1';
-      pagePath.style.transition = 'opacity 0.3s';
+        for (let i = 0; i < childDivs.length; i++) {
+            if (childDivs[i].tagName === 'DIV' && childDivs[i] !== pagePath) {
+                childDivs[i].style.display = 'none';
+            }
+        }
 
-      btn.disabled = false;
-    }, 35);
-  }, 200);
+        pagePath.style.display = 'block';
+        pagePath.style.opacity = '0';
+
+        setTimeout(() => {
+            pagePath.style.opacity = '1';
+            pagePath.style.transition = 'opacity 0.3s';
+
+            btn.disabled = false;
+        }, 35);
+    }, 200);
 }
