@@ -1,9 +1,9 @@
-function warn(link) {
+const warn = (link) => {
   document.getElementById("warn_url").href=`${link}`; 
   return false;
 };
 
-function dismissWarn() {
+const dismissWarn = () => {
   $('#warnModal').modal('hide');
   return false;
 };

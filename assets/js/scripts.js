@@ -4,8 +4,13 @@ $('[data-toggle="tooltip"]').tooltip({
     html: true
 });
 
+/* Detect Back Button */
+window.addEventListener('popstate', () => {
+    location.reload();
+});
+
 /* Copy Function */
-function copy(profile) {
+const copy = (profile) => {
     if (profile) {
         navigator.clipboard.writeText(`https://doggirls.pages.dev/?dog=${profile}`);
         $(document.querySelector(`#${profile} .profile_items .profile_text .title snap`)).tooltip('hide')

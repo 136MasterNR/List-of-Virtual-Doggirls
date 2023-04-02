@@ -1,9 +1,7 @@
 const screenWidth = window.innerWidth;
 const animationDuration = screenWidth < 500 ? '0.5s' : '0.75s';
 
-// Wait for the page to finish loading before adding the image loading event listener
-
-function transition(modal) {
+const transition = (modal) => {
     sessionStorage.setItem("scrollPosition", window.scrollY || document.documentElement.scrollTop);
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
@@ -55,7 +53,7 @@ function transition(modal) {
     return false;
 }
 
-function transitionAlone(modal) {
+const transitionAlone = (modal) => {
     let content=document.getElementById(modal)
     fetch('./doggirls.json')
         .then(response => response.json())
@@ -73,12 +71,8 @@ function transitionAlone(modal) {
         let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
         if (pagePath) {
             document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .content`).style.display = "none";
-            let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper button`);
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-            }
+            document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper button.content`).style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
             document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper .${page}`).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-            console.log(pagePath)
             pagePath.style.display = 'block';
             pagePath.style.opacity = '1';
         }
@@ -86,7 +80,7 @@ function transitionAlone(modal) {
     return false;
 }
 
-function transitionOff(modal) {
+const transitionOff = (modal) => {
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
@@ -111,7 +105,7 @@ function transitionOff(modal) {
     return false;
 }
 
-function page(modal, page, btn) {
+const page = (modal, page, btn) => {
 
     let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
 
@@ -161,5 +155,6 @@ function page(modal, page, btn) {
 
             btn.disabled = false;
         }, 35);
+
     }, 200);
 }
