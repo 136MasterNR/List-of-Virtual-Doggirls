@@ -84,14 +84,14 @@
 }
 .profile .profile_items .profile_about .profile_text {
   position: relative;
-  height: calc(100vh - 125px);
+  min-height: 755px;
+  height: auto;
+  max-height: 850px;
   border: 3px solid rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 9% 9% 9% 9%;
   padding: 17px;
   line-height: 20px;
-  min-height: 750px;
-  max-height: 850px;
 }
 .profile .profile_items .profile_about .profile_text .title {
   font-family: "Acme", sans-serif;
@@ -168,6 +168,7 @@
   grid-row-gap: 0;
 }
 .profile .profile_items .profile_about .profile_text button {
+  margin-top: 25px;
   background: linear-gradient(90deg, rgb(194, 169, 255) 0%, rgb(117, 123, 242) 100%);
   background-size: 150% 150%;
   border: solid 3px rgba(255, 255, 255, 0.9);
@@ -181,14 +182,15 @@
   position: sticky;
   top: 100%;
   white-space: nowrap;
-  transition: font-size 0.1s ease-in-out;
+  transition: font-size 0.1s ease-in-out, padding 0.1s ease-in-out;
 }
 .profile .profile_items .profile_about .profile_text button:focus, .profile .profile_items .profile_about .profile_text button:active {
   outline: none !important;
   box-shadow: none;
 }
 .profile .profile_items .profile_about .profile_text button:hover {
-  font-size: 19px;
+  font-size: 20px;
+  padding: 12.5px 34px;
 }
 
 @media (max-width: 1000px) {

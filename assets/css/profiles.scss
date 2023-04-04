@@ -94,14 +94,14 @@
 
             .profile_text {
                 position: relative;
-                height: calc(100vh - 125px);
+                min-height: 755px;
+                height: auto;
+                max-height: 850px;
                 border: 3px solid rgb(255, 255, 255);
                 background-color: rgba(0, 0, 0, 0.1);
                 border-radius: 9% 9% 9% 9%;
                 padding: 17px;
                 line-height: 20px;
-                min-height: 750px;
-                max-height: 850px;
 
                 .title {
                     font-family: 'Acme', sans-serif;
@@ -195,6 +195,7 @@
                 }
 
                 button {
+                    margin-top: 25px;
                     background: linear-gradient(90deg, rgba(194,169,255,1) 0%, rgba(117,123,242,1) 100%);
                     background-size: 150% 150%;
                     border: solid 3px rgba(255, 255, 255, 0.9);
@@ -213,9 +214,11 @@
                         box-shadow: none;
                     }
 
-                    transition: font-size 0.1s ease-in-out;
+                    transition: font-size 0.1s ease-in-out, padding 0.1s ease-in-out;
                     &:hover {
-                        font-size: 19px;
+                        font-size: 20px;
+                        padding: 12.5px 34px;
+
                     }
                 }
             }
