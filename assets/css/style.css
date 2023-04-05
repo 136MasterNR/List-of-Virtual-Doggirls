@@ -74,6 +74,10 @@ header a, a:hover {
   color: var(--white);
 }
 
+.disabled {
+  pointer-events: none;
+}
+
 #bottom {
   display: none;
   width: -moz-min-content;

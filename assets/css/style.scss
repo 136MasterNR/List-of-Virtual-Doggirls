@@ -14,7 +14,7 @@
     background: rgb(194, 169, 255);
 }
 
-//Chrome Scrollbar
+// Chrome Scrollbar
 ::-webkit-scrollbar {
     width: 0.5em;
     height: 0.5em;
@@ -69,6 +69,10 @@ a.dotted {
 header a,a:hover {
     text-decoration: none;
     color: var(--white)
+}
+
+.disabled {
+    pointer-events: none;
 }
 
 #bottom {

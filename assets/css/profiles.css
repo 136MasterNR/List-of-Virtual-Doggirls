@@ -5,12 +5,6 @@
   width: 100vw;
   max-width: 100%;
 }
-.profile p {
-  margin-bottom: 12.75px;
-}
-.profile h4 {
-  margin-bottom: 10px;
-}
 .profile .profile_items {
   margin-left: auto;
   margin-right: auto;
@@ -91,6 +85,7 @@
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 9% 9% 9% 9%;
   padding: 17px;
+  margin-bottom: 10px;
   line-height: 20px;
 }
 .profile .profile_items .profile_about .profile_text .title {
@@ -190,7 +185,7 @@
 }
 .profile .profile_items .profile_about .profile_text button:hover {
   font-size: 20px;
-  padding: 12.5px 34px;
+  padding: 12.5px 33.5px;
 }
 
 @media (max-width: 1000px) {

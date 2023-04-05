@@ -8,7 +8,8 @@ const transition = (modal) => {
     let bottom=document.getElementById('bottom')
     vtubers.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
     bottom.style.animation=`offscreen ${animationDuration} ease-in forwards 1`;
-    const transitionFinalize = function() {
+    document.getElementById("list").classList.add("disabled");
+    const transitionFinalize = () => {
         document.querySelector('#loading').style.display="none";
         content.style.display = "block";
         content.style.animation = `onscreen ${animationDuration} ease-out forwards 1`;
@@ -19,6 +20,7 @@ const transition = (modal) => {
         vtubers.style.animation=null;
         bottom.style.animation=null;
         vtubers.style.display="none"
+        document.getElementById("list").classList.remove("disabled");
         let profileImg = document.querySelector(`#${modal}.profile .profile_items .profile_img img`);
         if (profileImg) {
             document.querySelector('#loading').style.display="block";
@@ -50,7 +52,7 @@ const transition = (modal) => {
         document.title = `Virtual Doggirls - ${dog.name}`;
     })
     .catch(error => console.error(error));
-    return false;
+    return;
 }
 
 const transitionAlone = (modal) => {
@@ -77,14 +79,15 @@ const transitionAlone = (modal) => {
             pagePath.style.opacity = '1';
         }
     }
-    return false;
+    return;
 }
 
 const transitionOff = (modal) => {
     let vtubers=document.getElementById('vtubers')
-    let content=document.getElementById(modal)
     let bottom=document.getElementById('bottom')
+    let content=document.getElementById(modal)
     document.title = `Virtual Doggirls`;
+    content.classList.add("disabled");
     content.style.animation=`offscreenRev ${animationDuration} ease-in forwards 1`
     content.addEventListener("animationend", () => {
         document.getElementsByTagName("body")[0].style.overflow = null
@@ -94,6 +97,7 @@ const transitionOff = (modal) => {
         vtubers.style.animation=`onscreenRev ${animationDuration} ease-out forwards 1`
         bottom.style.animation=`onscreenRev ${animationDuration} ease-out forwards 1`
         content.style.display="none"
+        content.classList.remove("disabled");
         let savedScrollPosition = sessionStorage.getItem("scrollPosition");
         if (savedScrollPosition) {
             window.scrollTo({top: savedScrollPosition, behavior: 'instant'})
@@ -102,7 +106,7 @@ const transitionOff = (modal) => {
         once: true
     });
     history.pushState(null, null, `${location.protocol}//${location.host}`)
-    return false;
+    return;
 }
 
 const page = (modal, page, btn) => {
@@ -157,4 +161,5 @@ const page = (modal, page, btn) => {
         }, 35);
 
     }, 200);
+    return;
 }
