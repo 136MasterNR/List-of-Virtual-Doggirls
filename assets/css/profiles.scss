@@ -137,6 +137,15 @@
                 .content, .credits, .contact, .character {
                     text-align: left;
 
+                    .hidden {
+                        cursor: pointer;
+                        color: lightgray;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+
                     div.p p {
                         margin-bottom: 10px;
                     }
@@ -187,7 +196,7 @@
                     }
                 }
 
-                button {
+                button.btn {
                     margin-top: 25px;
                     background: linear-gradient(90deg, rgba(194,169,255,1) 0%, rgba(117,123,242,1) 100%);
                     background-size: 150% 150%;

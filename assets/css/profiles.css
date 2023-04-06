@@ -123,6 +123,13 @@
 .profile .profile_items .profile_about .profile_text .content, .profile .profile_items .profile_about .profile_text .credits, .profile .profile_items .profile_about .profile_text .contact, .profile .profile_items .profile_about .profile_text .character {
   text-align: left;
 }
+.profile .profile_items .profile_about .profile_text .content .hidden, .profile .profile_items .profile_about .profile_text .credits .hidden, .profile .profile_items .profile_about .profile_text .contact .hidden, .profile .profile_items .profile_about .profile_text .character .hidden {
+  cursor: pointer;
+  color: lightgray;
+}
+.profile .profile_items .profile_about .profile_text .content .hidden:hover, .profile .profile_items .profile_about .profile_text .credits .hidden:hover, .profile .profile_items .profile_about .profile_text .contact .hidden:hover, .profile .profile_items .profile_about .profile_text .character .hidden:hover {
+  color: white;
+}
 .profile .profile_items .profile_about .profile_text .content div.p p, .profile .profile_items .profile_about .profile_text .credits div.p p, .profile .profile_items .profile_about .profile_text .contact div.p p, .profile .profile_items .profile_about .profile_text .character div.p p {
   margin-bottom: 10px;
 }
@@ -162,7 +169,7 @@
   grid-column-gap: 5px;
   grid-row-gap: 0;
 }
-.profile .profile_items .profile_about .profile_text button {
+.profile .profile_items .profile_about .profile_text button.btn {
   margin-top: 25px;
   background: linear-gradient(90deg, rgb(194, 169, 255) 0%, rgb(117, 123, 242) 100%);
   background-size: 150% 150%;
@@ -179,11 +186,11 @@
   white-space: nowrap;
   transition: font-size 0.1s ease-in-out, padding 0.1s ease-in-out;
 }
-.profile .profile_items .profile_about .profile_text button:focus, .profile .profile_items .profile_about .profile_text button:active {
+.profile .profile_items .profile_about .profile_text button.btn:focus, .profile .profile_items .profile_about .profile_text button.btn:active {
   outline: none !important;
   box-shadow: none;
 }
-.profile .profile_items .profile_about .profile_text button:hover {
+.profile .profile_items .profile_about .profile_text button.btn:hover {
   font-size: 20px;
   padding: 12.5px 33.5px;
 }
