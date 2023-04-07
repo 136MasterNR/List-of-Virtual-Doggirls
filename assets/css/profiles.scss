@@ -138,6 +138,7 @@
                     text-align: left;
 
                     .hidden {
+                        user-select: none;
                         cursor: pointer;
                         color: lightgray;
 
