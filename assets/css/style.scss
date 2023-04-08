@@ -215,6 +215,7 @@ header a,a:hover {
                     background: linear-gradient(180deg, rgba(255,243,208,1) 0%, rgba(255,255,255,1) 100%);
                     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff3d0",endColorstr="#ffffff",GradientType=1); 
                     border-radius: 44% 44% 44% 44% / 44% 44% 44% 44%;
+                    image-rendering: auto;
                 }
             }
         }

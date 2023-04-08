@@ -17,6 +17,7 @@
   height: 100vh;
   min-height: 815px;
   max-height: 1000px;
+  image-rendering: auto;
 }
 .profile .profile_items small {
   color: darkgray;
