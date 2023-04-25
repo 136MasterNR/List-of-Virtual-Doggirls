@@ -62,6 +62,7 @@ searchBox.addEventListener('input', () => {
 const search = () => {
   const searchContainer = document.querySelector('.webflow-style-input');
   const vtubers = document.getElementById('vtubers');
+  vtubers.style.animation = '';
   if (searchContainer.style.display === 'flex') {
     vtubers.style.transition = 'transform 0.5s ease';
     vtubers.style.transform = 'translateY(-85px)';
