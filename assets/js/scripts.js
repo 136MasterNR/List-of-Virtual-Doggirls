@@ -49,6 +49,7 @@ searchBox.addEventListener('input', () => {
       } else {
         vtuberDiv.style.display = 'none';
       }
+      if (hasResults==true) {document.getElementById('introduce-your-self').style.display = '';}
     }
   });
 
