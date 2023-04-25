@@ -364,6 +364,9 @@ div.vtuber > div > h3 > a:hover {
   }
 }
 @media (max-width: 800px) {
+  .webflow-style-input {
+    top: -10px !important; /* Important to override previous state */
+  }
   .area {
     scrollbar-color: unset;
     scrollbar-width: auto;
