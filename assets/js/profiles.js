@@ -2,7 +2,6 @@ const screenWidth = window.innerWidth;
 const animationDuration = screenWidth < 500 ? '0.5s' : '0.75s';
 
 const transition = (modal) => {
-    search()
     sessionStorage.setItem("scrollPosition", window.scrollY || document.documentElement.scrollTop);
     let vtubers=document.getElementById('vtubers')
     let content=document.getElementById(modal)
@@ -37,7 +36,8 @@ const transition = (modal) => {
         } else {
             transitionFinalize()
         }
-          
+        const webflowInput = document.querySelector('.webflow-style-input');
+        webflowInput.style.display = webflowInput.style.display === 'flex' ? '' : null;
     }, {
         once: true
     });
