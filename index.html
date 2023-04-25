@@ -61,10 +61,14 @@
         <div class="area">
             <ul class="circles"><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li></ul>
         <div class="vtubers" id="vtubers">
+            <div class="webflow-style-input">
+                <input maxlength="24" id="search-box" type="email" placeholder="Search for Doggirls"></input>
+            </div>
             <div class="title">
-                <h1><span>Virtual Doggirls</span></h1>
+                <h1><span>Virtual Doggirls</span><i onclick="search()" id="search-btn" class="fa-beat-fade fa-brands fa-searchengin fa-2xs"></i></h1>
             </div>
             <div class="list" id="list">
+                <h1 id="no-results-message" style="display: none;">No results</h1>
                 <div class="vtuber">
                     <div class="image">
                         <img src="./assets/img/icon/inugami_korone.webp" alt="Inugami Korone" onclick="transition(`inugami_korone`)"></a>
@@ -538,17 +542,16 @@
                 </div>
                 <div class="vtuber">
                     <div class="image">
-                        <img src="./assets/img/icon/klaire_fluffle.webp" alt="Klaire Fluffle" onclick="transition(`klaire_fluffle`)">
+                        <img src="./assets/img/icon/chibichinu.webp" alt="chibichinu" onclick="transition(`chibichinu`)">
                     </div>
                     <div class="text">
-                        <h3><a onclick="transition(`klaire_fluffle`)" class="name">Klaire Fluffle </a><span> EN</span><br/>
-                            <span class="independent">(Independent)</span>
+                        <h3><a onclick="transition(`chibichinu`)" class="name">Chibi</a><span> EN</span><br/>
+                            <span><a href="https://chibichinu.carrd.co/" target=”_blank”>Home<i class="fa-solid fa-house-user"></i></a></span>
                             <br/><span id="icon">
-                                <a href="https://www.youtube.com/@Klaire_Fluffle" target=”_blank”><i class="fa-brands fa-youtube fa-xl"></i></a>
-                                <a href="https://twitch.tv/Klaire_Fluffle" target=”_blank”><i class="fa-brands fa-twitch fa-xl"></i></a>
-                                <a href="https://twitter.com/Klaire_Fluffle" target=”_blank”><i class="fa-brands fa-twitter fa-xl"></i></a>
-                                <a href="https://discord.com/invite/jaDZwxf9Hq" target=”_blank”><i class="fa-brands fa-discord fa-xl"></i></a>
-                                <a href="https://www.tiktok.com/@klaire_fluffle" target=”_blank”><i class="fa-brands fa-tiktok fa-xl"></i></a>
+                                <a href="https://www.twitch.tv/chibichinu" target=”_blank”><i class="fa-brands fa-twitch fa-xl"></i></a>
+                                <a href="https://twitter.com/chibichinu" target=”_blank”><i class="fa-brands fa-twitter fa-xl"></i></a>
+                                <a href="https://discord.com/invite/4SdW3sWXvB" target=”_blank”><i class="fa-brands fa-discord fa-xl"></i></a>
+                                <a href="https://www.tiktok.com/@chibichinu" target=”_blank”><i class="fa-brands fa-tiktok fa-xl"></i></a>
                             </span>
                         </h3>
                     </div>
@@ -584,6 +587,23 @@
                                 <a href="https://discord.com/invite/puptayto" target=”_blank”><i class="fa-brands fa-discord fa-xl"></i></a>
                                 <a href="https://www.instagram.com/puptayto" target=”_blank”><i class="fa-brands fa-instagram fab"></i></a>
                                 <a href="https://www.tiktok.com/@puptayto" target=”_blank”><i class="fa-brands fa-tiktok fa-xl"></i></a>
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="vtuber">
+                    <div class="image">
+                        <img src="./assets/img/icon/klaire_fluffle.webp" alt="Klaire Fluffle" onclick="transition(`klaire_fluffle`)">
+                    </div>
+                    <div class="text">
+                        <h3><a onclick="transition(`klaire_fluffle`)" class="name">Klaire Fluffle </a><span> EN</span><br/>
+                            <span class="independent">(Independent)</span>
+                            <br/><span id="icon">
+                                <a href="https://www.youtube.com/@Klaire_Fluffle" target=”_blank”><i class="fa-brands fa-youtube fa-xl"></i></a>
+                                <a href="https://twitch.tv/Klaire_Fluffle" target=”_blank”><i class="fa-brands fa-twitch fa-xl"></i></a>
+                                <a href="https://twitter.com/Klaire_Fluffle" target=”_blank”><i class="fa-brands fa-twitter fa-xl"></i></a>
+                                <a href="https://discord.com/invite/jaDZwxf9Hq" target=”_blank”><i class="fa-brands fa-discord fa-xl"></i></a>
+                                <a href="https://www.tiktok.com/@klaire_fluffle" target=”_blank”><i class="fa-brands fa-tiktok fa-xl"></i></a>
                             </span>
                         </h3>
                     </div>
@@ -1141,6 +1161,26 @@
                             <p class="in-title about" style="text-align: center;">NOT ENOUGH INFORMATION</p><center><small>required items missing: model_image, birthday, breed</small></center>
                         </div>
                         <button class="btn" onclick="transitionOff(`tayto`)">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Profile -->
+        <!-- Start of Profile chibichinu -->
+        <div id="chibichinu" class="profile">
+            <div class="profile_items">
+                <div class="profile_img">
+                    <img onerror="this.onerror=null; this.src='./assets/img/profile/unknown.webp'" src="./assets/img/profile/chibichinu.webp" loading="lazy">
+                </div>
+                <div class="profile_about"><div class="profile_text">
+                        <h2 class="title">Chibi <snap datatoggle="tooltip" data-placement="top" title="Copy Profile Link"><i class="fa-solid fa-link fa-2xs fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075; color: rgba(255, 255, 255, 0.9); cursor: pointer;" onclick="copy('chibichinu')"></i></snap>
+                            <hr class="hr"/>
+                            <hr class="hr-small"/>
+                        </h2>
+                        <div class="content">
+                            <p class="in-title about" style="text-align: center;">NOT ENOUGH INFORMATION</p><center><small>required items missing: model_image, birthday, breed</small></center>
+                        </div>
+                        <button class="btn" onclick="transitionOff(`chibichinu`)">Go Back</button>
                     </div>
                 </div>
             </div>

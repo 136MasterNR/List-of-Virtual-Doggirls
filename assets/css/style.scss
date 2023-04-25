@@ -312,6 +312,70 @@ div.vtuber > div > h3 > a {
     }
 }
 
+/* Search Features */
+#search-btn {
+    position: absolute;
+    top: 10px;
+    color: rgb(245, 245, 245);
+    cursor: pointer;
+    --fa-beat-fade-opacity: 0.875;
+    --fa-beat-fade-scale: 1.075;
+}
+
+// Source code: https://codepen.io/PRtheRose/pen/BNgEJo
+$input-background: rgba(57, 63, 84, 0.7);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+// gradient animation
+@keyframes gradient { 
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflow-style-input {
+    position: relative;
+    display: none;
+    flex-direction: row;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 1.0rem 2rem 1.2rem;
+    background: $input-background;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 5;
+        height: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-position: 0% 0%;
+        background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+        background-size: 500% auto;
+        animation: gradient 3s linear infinite;
+    }
+
+    input {
+        text-align: center;
+        border-style: none;
+        background: transparent;
+        outline: none;
+        flex-grow: 1;
+        color: $input-text-active;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        vertical-align: middle;
+        &::-webkit-input-placeholder {
+            color: $input-text-inactive;
+        }
+    }
+}
+
 /* Auto Adjustment */
 @media (max-width: 1000px) {
     html {
