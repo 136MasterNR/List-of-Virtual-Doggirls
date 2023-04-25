@@ -177,6 +177,9 @@ header a, a:hover {
   border-bottom-left-radius: 1pc;
   border-bottom-right-radius: 1pc;
 }
+.vtubers .list #no-results-message {
+  color: lightgray;
+}
 .vtubers .list .text h3 a {
   color: var(--white);
 }

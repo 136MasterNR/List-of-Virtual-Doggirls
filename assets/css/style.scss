@@ -177,6 +177,10 @@ header a,a:hover {
         border-bottom-left-radius: 1pc;
         border-bottom-right-radius: 1pc;
 
+        #no-results-message {
+            color: lightgray;
+        }
+
         .text h3 a {
             color: var(--white);
         }

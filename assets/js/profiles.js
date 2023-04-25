@@ -37,7 +37,16 @@ const transition = (modal) => {
             transitionFinalize()
         }
         const webflowInput = document.querySelector('.webflow-style-input');
-        webflowInput.style.display = webflowInput.style.display === 'flex' ? '' : null;
+        if (webflowInput.style.display === 'flex') {
+            webflowInput.style.display = ''
+            vtuberDivs.forEach(vtuberDiv => {
+                const nameElement = vtuberDiv.querySelector('.text .name');
+                if (nameElement !== null) {
+                    vtuberDiv.style.display = '';
+                }
+            });
+            noResultsMessage.style.display = 'none';
+        };
     }, {
         once: true
     });
