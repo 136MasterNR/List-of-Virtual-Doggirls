@@ -71,6 +71,13 @@ const search = () => {
       vtubers.style.transition = 'transform 0s';
       vtubers.style.transform = 'translateY(0)';
     }, 500);
+    vtuberDivs.forEach(vtuberDiv => {
+      const nameElement = vtuberDiv.querySelector('.text .name');
+      if (nameElement !== null) {
+        vtuberDiv.style.display = '';
+      }
+    });
+    noResultsMessage.style.display = 'none';
   } else {
     searchContainer.style.display = 'flex';
     vtubers.style.transition = 'transform 0s';
