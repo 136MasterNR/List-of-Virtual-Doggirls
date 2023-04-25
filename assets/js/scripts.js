@@ -43,7 +43,7 @@ searchBox.addEventListener('input', () => {
     const nameElement = vtuberDiv.querySelector('.text .name');
     if (nameElement !== null) {
       const name = nameElement.textContent.toLowerCase();
-      if (name.includes(searchTerm)) {
+      if (name.includes(searchTerm) && (vtuberDiv.id !=='introduce-your-self')) {
         vtuberDiv.style.display = '';
         hasResults = true;
       } else {
