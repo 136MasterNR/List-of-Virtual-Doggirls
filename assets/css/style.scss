@@ -418,27 +418,26 @@ $input-text-active: #BFD2FF;
         width: 50%;
     }
 
-    .vtubers .list{
-        border-bottom: 1px white;
-        border-left: none;
-        border-right: none;
-        
+    .vtubers{
+        padding-top: 20px;
+        width: 800px;
+        max-width: 100%;
+        margin: 0 auto;
 
-        .vtuber {
-            margin: 0;
-            margin-left: -50px;
-            margin-right: -50px;
-            text-align: center;
-            display: block;
-            z-index: 1;
+        .list {
+            border-bottom: 1px white;
+            border-left: none;
+            border-right: none;
 
-            position: relative;
-
-            transform: scale(0.9, 0.9);
-            -ms-transform: scale(0.9, 0.9); /* IE 9 */
-            -webkit-transform: scale(0.9, 0.9); /* Safari and Chrome */
-            -o-transform: scale(0.9, 0.9); /* Opera */
-            -moz-transform: scale(0.9, 0.9); /* Firefox */
+            .vtuber {
+                margin-bottom: 15px;
+                margin-left: -50px;
+                margin-right: -50px;
+                text-align: center;
+                display: block;
+                z-index: 1;
+                position: relative;
+            }
         }
     }
 
@@ -464,7 +463,6 @@ $input-text-active: #BFD2FF;
         }
 
         .list {
-            margin-top: -18.5px;
             text-align: center;
             padding-top: 50px;
             display: grid;
@@ -475,3 +473,7 @@ $input-text-active: #BFD2FF;
         }
     }
 }
+
+@media (max-width: 400px) {.vtubers .list .vtuber {transform: scale(0.9, 0.9)}}
+
+@media (max-width: 360px) {.vtubers .list .vtuber {transform: scale(0.85, 0.85)}}
