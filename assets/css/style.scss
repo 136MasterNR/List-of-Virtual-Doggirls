@@ -41,6 +41,12 @@ html {
     }
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 #loading {
     display: flex;
     position: fixed;
