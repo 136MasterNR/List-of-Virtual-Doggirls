@@ -91,7 +91,7 @@ header a,a:hover {
         width: min-content;
         position: relative;
         bottom: -6.7px;
-        left: calc(50vw - 110px);
+        left: calc(50svw - 110px);
         z-index: 5;
         color: var(--gray);
         white-space: nowrap;
@@ -419,7 +419,7 @@ $input-text-active: #BFD2FF;
         position: relative;
         top: 5px;
         margin-bottom: 11px;
-        left: 28vw;
+        left: 28svw;
         text-size-adjust: auto;
         width: 50%;
     }
