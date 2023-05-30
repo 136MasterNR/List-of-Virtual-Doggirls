@@ -1,8 +1,8 @@
 .profile {
   display: none;
   margin: 0 auto;
-  height: 100svh;
-  width: 100svw;
+  height: 100vh;
+  width: 100vw;
   max-width: 100%;
 }
 .profile .profile_items {
@@ -14,7 +14,7 @@
   position: relative;
 }
 .profile .profile_items .profile_img img {
-  height: 100svh;
+  height: 100vh;
   min-height: 815px;
   max-height: 1000px;
   image-rendering: auto;
@@ -211,7 +211,7 @@
   }
   .profile .profile_items .profile_img img {
     min-width: auto;
-    max-width: 100svw;
+    max-width: 100vw;
     min-height: auto;
     max-height: 1200px;
     width: auto;
@@ -220,16 +220,16 @@
        object-fit: contain;
   }
   .profile .profile_items .profile_about {
-    width: 90svw;
+    width: 90vw;
     margin-bottom: 50px;
   }
 }
 @media (max-width: 535px) {
   .profile_nav {
-    width: 75svw;
+    width: 75vw;
   }
   .profile_nav button {
-    width: 18svw;
+    width: 18vw;
     padding-right: 0px !important;
     padding-left: 0px !important;
   }
@@ -239,20 +239,20 @@
   }
   .profile .profile_items .profile_about .profile_text .title {
     padding-right: 10px !important;
-    font-size: 8svw;
+    font-size: 8vw;
   }
   .profile .profile_items .profile_about .profile_text .title hr {
     color: white;
-    height: 0.45svw;
+    height: 0.45vw;
     opacity: 0.7;
     margin-top: auto;
-    margin-bottom: 1.8svw;
+    margin-bottom: 1.8vw;
   }
   .profile .profile_items .profile_about .profile_text .title .hr {
-    width: 65svw;
+    width: 65vw;
   }
   .profile .profile_items .profile_about .profile_text .title .hr-small {
-    width: 50svw;
+    width: 50vw;
   }
   .profile .profile_items .profile_about .profile_text p {
     font-size: 17px !important;

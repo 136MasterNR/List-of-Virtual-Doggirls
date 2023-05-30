@@ -96,7 +96,7 @@ header a, a:hover {
   width: min-content;
   position: relative;
   bottom: -6.7px;
-  left: calc(50svw - 110px);
+  left: calc(50vw - 110px);
   z-index: 5;
   color: var(--gray);
   white-space: nowrap;
@@ -386,7 +386,7 @@ div.vtuber > div > h3 > a:hover {
     position: relative;
     top: 5px;
     margin-bottom: 11px;
-    left: 28svw;
+    left: 28vw;
     -webkit-text-size-adjust: auto;
        -moz-text-size-adjust: auto;
             text-size-adjust: auto;
