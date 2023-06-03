@@ -95,19 +95,25 @@ header a, a:hover {
   width: -moz-min-content;
   width: min-content;
   position: relative;
-  bottom: -6.7px;
-  left: calc(50vw - 110px);
   z-index: 5;
   color: var(--gray);
   white-space: nowrap;
   font-size: 15px;
 }
-#bottom p a {
+#bottom p:nth-child(1) {
+  bottom: -6.7px;
+  left: calc(50vw - 110px);
+}
+#bottom p:nth-child(1) a {
   text-decoration: none;
   color: white;
 }
-#bottom p a:hover {
+#bottom p:nth-child(1) a:hover {
   text-decoration: underline;
+}
+#bottom p:nth-child(2) {
+  bottom: 10px;
+  left: calc(50vw - 178px);
 }
 
 .font-italic {
@@ -384,13 +390,19 @@ div.vtuber > div > h3 > a:hover {
   }
   #bottom p {
     position: relative;
-    top: 5px;
-    margin-bottom: 11px;
-    left: 28vw;
     -webkit-text-size-adjust: auto;
        -moz-text-size-adjust: auto;
             text-size-adjust: auto;
     width: 50%;
+  }
+  #bottom p:nth-child(2) {
+    left: calc(50vw - 155px);
+  }
+  #bottom p:nth-child(1) {
+    position: relative;
+    top: 5px;
+    margin-bottom: 11px;
+    left: calc(50vw - 90px);
   }
   .vtubers {
     padding-top: 20px;

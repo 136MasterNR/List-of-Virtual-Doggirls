@@ -86,16 +86,21 @@ header a,a:hover {
 #bottom {
     display: none;
     width: min-content;
+
     p {
         display: inline-block;
         width: min-content;
         position: relative;
-        bottom: -6.7px;
-        left: calc(50vw - 110px);
         z-index: 5;
         color: var(--gray);
         white-space: nowrap;
         font-size: 15px;
+    }
+
+    p:nth-child(1) {
+        bottom: -6.7px;
+        left: calc(50vw - 110px);
+
         a {
             text-decoration: none;
             color: white;
@@ -104,6 +109,11 @@ header a,a:hover {
                 text-decoration: underline;
             }
         }
+    }
+
+    p:nth-child(2) {
+        bottom: 10px;
+        left: calc(50vw - 178px);
     }
 }
 
@@ -415,13 +425,23 @@ $input-text-active: #BFD2FF;
         height: 0em;
     }
 
-    #bottom p {
-        position: relative;
-        top: 5px;
-        margin-bottom: 11px;
-        left: 28vw;
-        text-size-adjust: auto;
-        width: 50%;
+    #bottom {
+        p {
+            position: relative;
+            text-size-adjust: auto;
+            width: 50%;
+        }
+
+        p:nth-child(2) {
+            left: calc(50vw - 155px);
+        }
+
+        p:nth-child(1) {
+            position: relative;
+            top: 5px;
+            margin-bottom: 11px;
+            left: calc(50vw - 90px);
+        }
     }
 
     .vtubers{
