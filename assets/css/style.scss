@@ -237,6 +237,31 @@ header a,a:hover {
                     border-radius: 44% 44% 44% 44% / 44% 44% 44% 44%;
                     image-rendering: auto;
                 }
+
+                .badge {
+                    position: absolute;
+                    color: rgba(255, 250, 106, 1);
+                    background-color: rgba(0, 0, 0, 0.4);
+                    border: solid rgba(255, 255, 0, 0.6) 1px;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 45%;
+                    margin-left: -27.5px;
+                    margin-top: 7.5px;
+
+                    & [title]:hover::after {
+                        content: attr(title);
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                    }
+
+                    i {
+                        position: relative;
+                        margin-left: -5.5px;
+                        margin-top: 7px;
+                    }
+                }
             }
         }
     }
