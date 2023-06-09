@@ -21,7 +21,7 @@ const transition = (modal) => {
         bottom.style.animation=null;
         vtubers.style.display="none"
         document.getElementById("list").classList.remove("disabled");
-        let profileImg = document.querySelector(`#${modal}.profile .profile_items .profile_img img`);
+        let profileImg = document.querySelector(`[id="${modal}"].profile .profile_items .profile_img img`);
         if (profileImg) {
             document.querySelector('#loading').style.display="block";
             document.querySelector('#loading').style.animation="fadeIn 0.36s ease-out forwards 1";
@@ -58,7 +58,7 @@ const transition = (modal) => {
     fetch('./doggirls.json')
         .then(response => response.json())
         .then(data => {
-        let dog = data.doggirls.find(dog => dog.username === modal);
+        let dog = data.doggirls.find(dog => `_${dog.username}` === `_${modal}`);
         document.title = `Virtual Doggirls - ${dog.name}`;
     })
     .catch(error => console.error(error));
@@ -70,7 +70,7 @@ const transitionAlone = (modal) => {
     fetch('./doggirls.json')
         .then(response => response.json())
         .then(data => {
-            let dog = data.doggirls.find(dog => dog.username === modal);
+            let dog = data.doggirls.find(dog => `_${dog.username}` === `_${modal}`);
             document.title = `Virtual Doggirls - ${dog.name}`;
         })
     .catch(error => console.error(error));
@@ -80,11 +80,11 @@ const transitionAlone = (modal) => {
     let page = searchParams.get('page');
     if (page) {
         page=page.toLowerCase()
-        let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
+        let pagePath = document.querySelector(`[id="${modal}"].profile .profile_items .profile_about .profile_text .${page}`);
         if (pagePath) {
-            document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .content`).style.display = "none";
-            document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper button.content`).style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-            document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_nav .wrapper .${page}`).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
+            document.querySelector(`[id="${modal}"].profile .profile_items .profile_about .profile_text .content`).style.display = "none";
+            document.querySelector(`[id="${modal}"].profile .profile_items .profile_about .profile_nav .wrapper button.content`).style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+            document.querySelector(`[id="${modal}"].profile .profile_items .profile_about .profile_nav .wrapper .${page}`).style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
             pagePath.style.display = 'block';
             pagePath.style.opacity = '1';
         }
@@ -136,14 +136,14 @@ const page = (modal, page, btn) => {
 
     btn.disabled = true;
 
-    let buttons = document.querySelectorAll(`#${modal}.profile .profile_items .profile_about .profile_nav button`);
+    let buttons = document.querySelectorAll(`[id="${modal}"].profile .profile_items .profile_about .profile_nav button`);
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
     }
 
     btn.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
 
-    let parentDiv = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text`);
+    let parentDiv = document.querySelector(`[id="${modal}"].profile .profile_items .profile_about .profile_text`);
     let childDivs = parentDiv.children;
 
     for (let i = 0; i < childDivs.length; i++) {
