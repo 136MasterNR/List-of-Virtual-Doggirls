@@ -58,7 +58,7 @@ const transition = (modal) => {
     fetch('./doggirls.json')
         .then(response => response.json())
         .then(data => {
-        let dog = data.doggirls.find(dog => `_${dog.username}` === `_${modal}`);
+        let dog = data.doggirls.find(dog => dog.username === modal);
         document.title = `Virtual Doggirls - ${dog.name}`;
     })
     .catch(error => console.error(error));
@@ -70,7 +70,7 @@ const transitionAlone = (modal) => {
     fetch('./doggirls.json')
         .then(response => response.json())
         .then(data => {
-            let dog = data.doggirls.find(dog => `_${dog.username}` === `_${modal}`);
+            let dog = data.doggirls.find(dog => dog.username === modal);
             document.title = `Virtual Doggirls - ${dog.name}`;
         })
     .catch(error => console.error(error));
@@ -121,7 +121,7 @@ const transitionOff = (modal) => {
 
 const page = (modal, page, btn) => {
 
-    let pagePath = document.querySelector(`#${modal}.profile .profile_items .profile_about .profile_text .${page}`);
+    let pagePath = document.querySelector(`[id="${modal}"].profile .profile_items .profile_about .profile_text .${page}`);
 
     let pagePathDisplay = window.getComputedStyle(pagePath).getPropertyValue('display');
     if (pagePathDisplay === 'block') {
