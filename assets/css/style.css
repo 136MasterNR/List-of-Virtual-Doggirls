@@ -251,7 +251,7 @@ header a, a:hover {
   margin-top: 7px;
 }
 
-div.vtuber > div > h3 > a {
+div.vtuber > div > h3 > a.name {
   text-decoration-line: none;
   background: linear-gradient(to right, white, white), linear-gradient(to right, rgb(218, 6, 157), rgb(184, 51, 255), rgb(75, 30, 171));
   background-size: 0% 2px, 0 2px;
@@ -260,7 +260,17 @@ div.vtuber > div > h3 > a {
   transition: background-size 400ms;
   transition: all 400ms;
 }
-div.vtuber > div > h3 > a:hover {
+div.vtuber > div > h3 > a.name:hover {
+  background-size: 0 2px, 100% 2px;
+}
+
+div.vtuber > div > h3 > a.shiki {
+  background: linear-gradient(to right, white, white), linear-gradient(to right, rgb(218, 0, 0), rgb(255, 0, 0));
+  background-size: 0% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+}
+div.vtuber > div > h3 > a.shiki:hover {
   background-size: 0 2px, 100% 2px;
 }
 
