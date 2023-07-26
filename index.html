@@ -61,6 +61,13 @@
             <p style="position: absolute;top: calc(50% + 100px);left: 50%;transform: translate(-50%, -50%);color: white;font-size:17px" loading="eager">Loading Assets...</p>
             <div class="cf-turnstile" data-sitekey="0x4AAAAAAADz-6MJJ-w7PPFG" data-callback="javascriptCallback"></div>
         </div>
+        <div class="rebrand">
+            <div class="content">
+                <div class="alert">This website has been deprecated.</div>
+                <div class="info">This website has been rebranded to <a href="https://vtubers.vercel.app/">VTube Center</a>.</div>
+                <div><a class="btn" href="https://vtubers.vercel.app/">VTube Center <i class="fa-solid fa-arrow-right"></i></a><button onclick="rebrandHide()">Close</button></div>
+            </div>
+        </div>
         <div class="area">
             <ul class="circles"><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li><li><object data="./assets/img/bubble.svg" type="image/svg+xml"></object></li></ul>
         <div class="vtubers" id="vtubers">
@@ -514,6 +521,20 @@
                         </h3>
                     </div>
                 </div>
+                <div class="vtuber">
+                    <div class="image">
+                        <img src="./assets/img/icon/oyusum.webp" alt="oyusum" onclick="transition(`oyusum`)">
+                    </div>
+                    <div class="text">
+                        <h3><a onclick="transition(`norashitagai`)" class="name">Oyu-chan</a><span> JP</span><br/>
+													<span class="independent">(Independent)</span>
+                            <br/><span id="icon">
+                                <a href="https://www.youtube.com/channel/UCQ1OcBFSr7GM9o60ZWIo6Eg" target=”_blank”><i class="fa-brands fa-youtube fa-xl"></i></a>
+                                <a href="https://twitter.com/oyusum" target=”_blank”><i class="fa-brands fa-twitter fa-xl"></i></a>
+                            </span>
+                        </h3>
+                    </div>
+                </div>
                 <!-- 10th row -->
                 <div class="vtuber">
                     <div class="image">
@@ -653,6 +674,21 @@
                 </div>
                 <div class="vtuber">
                     <div class="image">
+                        <img src="./assets/img/icon/2dpupy.webp" alt="nene" onclick="transition(`2dpupy`)">
+                    </div>
+                    <div class="text">
+                        <h3><a onclick="transition(`2dpupy`)" class="name">nene</a><span> EN</span><br/>
+                            <span><a href="https://linktr.ee/2dpup" target=”_blank”>Home<i class="fas fa-house-user"></i></a></span>
+                            <br/><span id="icon">
+                                <a href="https://www.twitch.tv/2dpup" target=”_blank”><i class="fa-brands fa-twitch fa-xl"></i></a>
+                                <a href="https://twitter.com/2dpupy" target=”_blank”><i class="fa-brands fa-twitter fa-xl"></i></a>
+                                <a href="https://discord.com/invite/AGfahpkVj8" target=”_blank”><i class="fa-brands fa-discord fa-xl"></i></a>
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="vtuber">
+                    <div class="image">
                         <img src="./assets/img/icon/inukai_purin.webp" alt="Inukai Purin" onclick="transition(`inukai_purin`)">
                     </div>
                     <div class="text">
@@ -668,21 +704,6 @@
                     </div>
                 </div>
                 <!-- 13th row -->
-                <div class="vtuber">
-                    <div class="image">
-                        <img src="./assets/img/icon/2dpupy.webp" alt="nene" onclick="transition(`2dpupy`)">
-                    </div>
-                    <div class="text">
-                        <h3><a onclick="transition(`2dpupy`)" class="name">nene</a><span> EN</span><br/>
-                            <span><a href="https://linktr.ee/2dpup" target=”_blank”>Home<i class="fas fa-house-user"></i></a></span>
-                            <br/><span id="icon">
-                                <a href="https://www.twitch.tv/2dpup" target=”_blank”><i class="fa-brands fa-twitch fa-xl"></i></a>
-                                <a href="https://twitter.com/2dpupy" target=”_blank”><i class="fa-brands fa-twitter fa-xl"></i></a>
-                                <a href="https://discord.com/invite/AGfahpkVj8" target=”_blank”><i class="fa-brands fa-discord fa-xl"></i></a>
-                            </span>
-                        </h3>
-                    </div>
-                </div>
                 <div class="vtuber">
                     <div class="image">
                         <a onclick="transition(`artstudebt`)"><img src="./assets/img/icon/artstudebt.webp" alt="artstudebt"></a>
@@ -1846,6 +1867,26 @@
                             <p class="in-title about" style="text-align: center;">NOT ENOUGH INFORMATION</p><center><small>required items missing: birthday, breed</small></center>
                         </div>
                         <button class="btn" onclick="transitionOff(`PopRoxy4`)">Go Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Profile -->
+        <!-- Start of Profile oyusum -->
+        <div id="oyusum" class="profile">
+            <div class="profile_items">
+                <div class="profile_img">
+                    <img onerror="this.onerror=null; this.src='./assets/img/profile/unknown.webp'" alt="imasamwich" src="./assets/img/profile/oyusum.webp" loading="lazy">
+                </div>
+                <div class="profile_about"><div class="profile_text">
+                        <h2 class="title">Oyu-chan <snap datatoggle="tooltip" data-placement="top" title="Copy Profile Link"><i class="fas fa-link fa-2xs fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075; color: rgba(255, 255, 255, 0.9); cursor: pointer;" onclick="copy('oyusum')"></i></snap>
+                            <hr class="hr"/>
+                            <hr class="hr-small"/>
+                        </h2>
+                        <div class="content">
+                            <p class="in-title about" style="text-align: center;">NOT ENOUGH INFORMATION</p><center><small>required items missing: birthday, breed</small></center>
+                        </div>
+                        <button class="btn" onclick="transitionOff(`oyusum`)">Go Back</button>
                     </div>
                 </div>
             </div>

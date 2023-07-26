@@ -91,3 +91,8 @@ const search = () => {
 
   searchBox.value = '';
 };
+
+function rebrandHide() {
+  const animateElement = document.querySelector('.rebrand');
+  animateElement.classList.add('rebrandHide');
+}

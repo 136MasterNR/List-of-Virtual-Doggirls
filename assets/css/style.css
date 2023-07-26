@@ -4,8 +4,8 @@
 }
 
 :root {
-  --blurple: rgba(117,123,242,1);
-  --purple: rgb(147,128,231);
+  --blurple: rgba(117, 123, 242, 1);
+  --purple: rgb(147, 128, 231);
   --gray: #cfcfcf;
   --white: #f0f0f0;
 }
@@ -76,7 +76,8 @@ a.dotted {
           text-decoration: dotted;
 }
 
-header a, a:hover {
+header a,
+a:hover {
   text-decoration: none;
   color: var(--white);
 }
@@ -377,7 +378,7 @@ div.vtuber > div > h3 > a.shiki:hover {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   background-position: 0% 0%;
-  background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+  background: linear-gradient(to right, #b294ff, #57e6e6, #feffb8, #57e6e6, #b294ff, #57e6e6);
   background-size: 500% auto;
   animation: gradient 3s linear infinite;
 }
@@ -387,13 +388,13 @@ div.vtuber > div > h3 > a.shiki:hover {
   background: transparent;
   outline: none;
   flex-grow: 1;
-  color: #BFD2FF;
+  color: #bfd2ff;
   font-size: 1.8rem;
   line-height: 2.4rem;
   vertical-align: middle;
 }
 .webflow-style-input input::-webkit-input-placeholder {
-  color: #7881A1;
+  color: #7881a1;
 }
 
 /* Auto Adjustment */
@@ -494,4 +495,106 @@ div.vtuber > div > h3 > a.shiki:hover {
   .vtubers .list .vtuber {
     transform: scale(0.85, 0.85);
   }
+}
+@keyframes rebrandMoveUp {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(-135px) translateX(-50%);
+  }
+}
+.rebrand {
+  display: flex;
+  position: fixed;
+  color: white;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  left: 50%;
+  top: 100vh;
+  transform: translateY(0px) translateX(-50%);
+  transition: transform 0.5s;
+  width: 100%;
+  max-width: 675px;
+  border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
+  z-index: 25;
+  animation: rebrandMoveUp 1.5s ease-in-out forwards;
+  animation-delay: 2.5s;
+}
+.rebrand::before {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 135px;
+  filter: grayscale(75%);
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0) 59.38%, rgb(23, 23, 25) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%), url("https://vtubers.vercel.app/img/header/doggirls/inugami_korone.webp"), lightgray 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 32.5%;
+  image-rendering: auto;
+}
+.rebrand .content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.rebrand .content .alert {
+  font-size: 23px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.rebrand .content .info {
+  color: #eaeaea;
+}
+.rebrand .content .info a {
+  color: rgb(189, 204, 221);
+}
+.rebrand .content .info a:hover {
+  color: rgb(222, 237, 253);
+}
+.rebrand .content a {
+  text-decoration: none;
+}
+.rebrand .content .btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 9px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  color: #0e3e48;
+  background-color: #35afca;
+  font-weight: 600;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.rebrand .content .btn:hover {
+  box-shadow: 0px 0px 35px -7.5px #35afca;
+  transform: scale(1.025);
+}
+.rebrand .content .btn i {
+  position: relative;
+  margin-left: 5px;
+  top: 1px;
+  font-size: 16px;
+}
+.rebrand .content button {
+  position: relative;
+  color: #9b9b9b;
+  border: none;
+  background-color: transparent;
+  padding: 7.5px;
+  top: 7px;
+}
+.rebrand .content button:hover {
+  color: #c4c4c4;
+}
+
+.rebrandHide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

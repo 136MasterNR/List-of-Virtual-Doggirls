@@ -1,552 +1,705 @@
 * {
-    font-family: 'Play', sans-serif;
-    box-sizing: border-box;
+  font-family: "Play", sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
-    --blurple: rgba(117,123,242,1);
-    --purple: rgb(147,128,231);
-    --gray: #cfcfcf;
-    --white: #f0f0f0;
+  --blurple: rgba(117, 123, 242, 1);
+  --purple: rgb(147, 128, 231);
+  --gray: #cfcfcf;
+  --white: #f0f0f0;
 }
 
 ::selection {
-    background: rgb(194, 169, 255);
+  background: rgb(194, 169, 255);
 }
 
 // Chrome Scrollbar
 ::-webkit-scrollbar {
-    width: 0.5em;
-    height: 0.5em;
+  width: 0.5em;
+  height: 0.5em;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 html {
-    min-height: 100%;
-    height: 100%;
-    position: relative;
-    user-select: text;
-    overflow-x: hidden;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  user-select: text;
+  overflow-x: hidden;
 
-    // Firefox Scrollbar
-    scrollbar-color: lightgray transparent;
-    scrollbar-width: thin;
+  // Firefox Scrollbar
+  scrollbar-color: lightgray transparent;
+  scrollbar-width: thin;
 
-    body {
-        background: var(--blurple);
-        max-width: 100%;
-    }
+  body {
+    background: var(--blurple);
+    max-width: 100%;
+  }
 }
 
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 #loading {
-    display: flex;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
 
-    img {
-        position: fixed;
-        left: calc(50% - 70px);
-        top: calc(50% - 70px);
-        image-rendering: auto;
-    }
+  img {
+    position: fixed;
+    left: calc(50% - 70px);
+    top: calc(50% - 70px);
+    image-rendering: auto;
+  }
 }
 
 img {
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 a.dotted {
-    text-decoration: dotted;
+  text-decoration: dotted;
 }
 
-header a,a:hover {
-    text-decoration: none;
-    color: var(--white)
+header a,
+a:hover {
+  text-decoration: none;
+  color: var(--white);
 }
 
 .disabled {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 #bottom {
-    display: none;
+  display: none;
+  width: min-content;
+
+  p {
+    display: inline-block;
     width: min-content;
+    position: relative;
+    z-index: 5;
+    color: var(--gray);
+    white-space: nowrap;
+    font-size: 15px;
+  }
 
-    p {
-        display: inline-block;
-        width: min-content;
-        position: relative;
-        z-index: 5;
-        color: var(--gray);
-        white-space: nowrap;
-        font-size: 15px;
+  p:nth-child(1) {
+    bottom: -6.7px;
+    left: calc(50vw - 110px);
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
 
-    p:nth-child(1) {
-        bottom: -6.7px;
-        left: calc(50vw - 110px);
-
-        a {
-            text-decoration: none;
-            color: white;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    p:nth-child(2) {
-        bottom: 10px;
-        left: calc(50vw - 178px);
-    }
+  p:nth-child(2) {
+    bottom: 10px;
+    left: calc(50vw - 178px);
+  }
 }
 
 .font-italic {
-    font-style: italic;
+  font-style: italic;
 }
-
 
 /*** title ***/
 
 .title h1 {
-    align-items: center;
-    color: var(--white);
-    font-weight: 700;
-    text-align: center;
-    font-size: 2.5rem;
+  align-items: center;
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 .list-title h2 {
-    display: flex;
-    color: var(--white);
-    font-weight: 600;
-    text-align: center;
-    font-size: 2.5rem;
+  display: flex;
+  color: var(--white);
+  font-weight: 600;
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 /*** vtuber listing ***/
 
 #vtubers {
-    animation: none;
-    display: none;
+  animation: none;
+  display: none;
 }
 
 .vtubers {
-    padding-top: 10px;
-    width: 1200px;
-    max-width: 100%;
-    margin: 0 auto;
+  padding-top: 10px;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
 
-    .title {
-        position: relative;
-        overflow: hidden;
-        
-        span {
-            display: inline-block;
-            vertical-align: baseline;
-            zoom: 1;
-            display: inline;
-            vertical-align: auto;
+  .title {
+    position: relative;
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+      zoom: 1;
+      display: inline;
+      vertical-align: auto;
+      position: relative;
+      padding: 0 20px;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        width: 1000px;
+        position: absolute;
+        top: 0.73em;
+        border-top: 1px solid white;
+        border-radius: 100%;
+      }
+
+      &:before {
+        right: 100%;
+      }
+      &:after {
+        left: 100%;
+      }
+    }
+  }
+
+  .list {
+    margin-top: -26px;
+    text-align: center;
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(100% / 3 - 20px), 1fr));
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom-left-radius: 1pc;
+    border-bottom-right-radius: 1pc;
+
+    #no-results-message {
+      color: lightgray;
+    }
+
+    .text h3 a {
+      color: var(--white);
+    }
+
+    .vtuber {
+      margin: 15px;
+      text-align: left;
+      display: flex;
+      z-index: 1;
+
+      .text {
+        margin: 28px 15px 0;
+
+        h3 {
+          font-weight: 700;
+          font-size: 1.5rem;
+          .name {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .image {
+        img {
+          line-height: 110px;
+          text-align: center;
+          color: mediumpurple;
+          display: inline-block;
+          cursor: pointer;
+          width: 128px;
+          height: 128px;
+          min-width: 128px;
+          min-height: 128px;
+          border: 4px solid var(--white);
+          background: rgb(241, 208, 255);
+          background: linear-gradient(
+            180deg,
+            rgb(242, 213, 254) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff3d0",endColorstr="#ffffff",GradientType=1);
+          border-radius: 44% 44% 44% 44% / 44% 44% 44% 44%;
+          image-rendering: auto;
+        }
+
+        .badge {
+          position: absolute;
+          color: rgba(255, 250, 106, 1);
+          background-color: rgba(0, 0, 0, 0.4);
+          border: solid rgba(255, 255, 0, 0.6) 1px;
+          width: 25px;
+          height: 25px;
+          border-radius: 45%;
+          margin-left: -27.5px;
+          margin-top: 7.5px;
+
+          & [title]:hover::after {
+            content: attr(title);
+            position: absolute;
+            top: -100%;
+            left: 0;
+          }
+
+          i {
             position: relative;
-            padding: 0 20px;
-
-            &:before, &:after {
-                content: '';
-                display: block;
-                width: 1000px;
-                position: absolute;
-                top: 0.73em;
-                border-top: 1px solid white;
-                border-radius: 100%;
-            }
-
-            &:before { right: 100%; }
-            &:after { left: 100%; }
+            margin-left: -5.5px;
+            margin-top: 7px;
+          }
         }
+      }
     }
-
-    .list {
-        margin-top: -26px;
-        text-align: center;
-        padding-top: 15px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(calc(100% / 3 - 20px), 1fr));
-        border-bottom: 1px solid white;
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        border-bottom-left-radius: 1pc;
-        border-bottom-right-radius: 1pc;
-
-        #no-results-message {
-            color: lightgray;
-        }
-
-        .text h3 a {
-            color: var(--white);
-        }
-
-        .vtuber {
-            margin: 15px;
-            text-align: left;
-            display: flex;
-            z-index: 1;
-
-            .text {
-                margin: 28px 15px 0;
-
-                h3 {
-                    font-weight: 700;
-                    font-size: 1.5rem;
-                    .name {
-                        cursor: pointer;
-                    }
-                }
-            }
-
-            .image {
-                img {
-                    line-height: 110px;
-                    text-align: center;
-                    color: mediumpurple;
-                    display: inline-block;
-                    cursor: pointer;
-                    width: 128px;
-                    height: 128px;
-                    min-width: 128px;
-                    min-height: 128px;
-                    border: 4px solid var(--white);
-                    background: rgb(241, 208, 255);
-                    background: linear-gradient(180deg, rgb(242, 213, 254) 0%, rgba(255,255,255,1) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff3d0",endColorstr="#ffffff",GradientType=1); 
-                    border-radius: 44% 44% 44% 44% / 44% 44% 44% 44%;
-                    image-rendering: auto;
-                }
-
-                .badge {
-                    position: absolute;
-                    color: rgba(255, 250, 106, 1);
-                    background-color: rgba(0, 0, 0, 0.4);
-                    border: solid rgba(255, 255, 0, 0.6) 1px;
-                    width: 25px;
-                    height: 25px;
-                    border-radius: 45%;
-                    margin-left: -27.5px;
-                    margin-top: 7.5px;
-
-                    & [title]:hover::after {
-                        content: attr(title);
-                        position: absolute;
-                        top: -100%;
-                        left: 0;
-                    }
-
-                    i {
-                        position: relative;
-                        margin-left: -5.5px;
-                        margin-top: 7px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 div.vtuber > div > h3 > a.name {
-    text-decoration-line: none;
-    background:
-        linear-gradient(
-        to right,
-        white,
-        white
-        ),
-        linear-gradient(
-        to right,
-        rgba(218, 6, 157, 1),
-        rgb(184, 51, 255),
-        rgb(75, 30, 171)
+  text-decoration-line: none;
+  background: linear-gradient(to right, white, white),
+    linear-gradient(
+      to right,
+      rgba(218, 6, 157, 1),
+      rgb(184, 51, 255),
+      rgb(75, 30, 171)
     );
-    background-size: 0% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
-    transition: all 400ms;
+  background-size: 0% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  transition: all 400ms;
 
-    &:hover {
-        background-size: 0 2px, 100% 2px;
-    }
+  &:hover {
+    background-size: 0 2px, 100% 2px;
+  }
 }
 
 div.vtuber > div > h3 > a.shiki {
-    background:
-        linear-gradient(
-        to right,
-        white,
-        white
-        ),
-        linear-gradient(
-        to right,
-        rgba(218, 0, 0, 1),
-        rgba(255, 0, 0, 1)
-    );
-    background-size: 0% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
+  background: linear-gradient(to right, white, white),
+    linear-gradient(to right, rgba(218, 0, 0, 1), rgba(255, 0, 0, 1));
+  background-size: 0% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
 
-    &:hover {
-        background-size: 0 2px, 100% 2px;
-    }
+  &:hover {
+    background-size: 0 2px, 100% 2px;
+  }
 }
 
 .text h3 span a {
-    transition: all 200ms;
-    
-    &:hover {
-        color: white!important;
-    }
+  transition: all 200ms;
+
+  &:hover {
+    color: white !important;
+  }
 }
 
 .vtuber .image {
-    border-radius: 100%;
+  border-radius: 100%;
 
-    &:hover ~ .text h3 a {
-        background-size: 0 2px, 100% 2px;
-    }
-    a {
-        cursor: pointer;
-    }
+  &:hover ~ .text h3 a {
+    background-size: 0 2px, 100% 2px;
+  }
+  a {
+    cursor: pointer;
+  }
 }
 
 .vtubers .list .text span {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    color: var(--gray);
-    opacity: 0.9;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: var(--gray);
+  opacity: 0.9;
 }
 
 .vtubers .text h3 span a {
-    text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .independent {
-    color:white;
-    opacity: 0.6!important;
+  color: white;
+  opacity: 0.6 !important;
 }
 
 /* Tooltip Container */
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+
+  .tooltiptext::after {
+    content: "";
     position: absolute;
-    z-index: 1;
-    bottom: 150%;
+    top: 100%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
 
-    .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: black transparent transparent transparent;
-    }
-
-    &:hover .tooltiptext {
-        visibility: visible;
-    }
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
 }
 
 /* Search Features */
 #search-btn {
-    position: absolute;
-    top: 10px;
-    color: rgb(245, 245, 245);
-    cursor: pointer;
-    --fa-beat-fade-opacity: 0.875;
-    --fa-beat-fade-scale: 1.075;
+  position: absolute;
+  top: 10px;
+  color: rgb(245, 245, 245);
+  cursor: pointer;
+  --fa-beat-fade-opacity: 0.875;
+  --fa-beat-fade-scale: 1.075;
 }
 
 // Source code: https://codepen.io/PRtheRose/pen/BNgEJo
 $input-background: rgba(57, 63, 84, 0.7);
-$input-text-inactive: #7881A1;
-$input-text-active: #BFD2FF;
+$input-text-inactive: #7881a1;
+$input-text-active: #bfd2ff;
 
 // gradient animation
-@keyframes gradient { 
-  0%{background-position:0 0}
-  100%{background-position:100% 0}
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 .webflow-style-input {
-    position: relative;
-    display: none;
-    flex-direction: row;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    padding: 1.0rem 2rem 1.2rem;
-    background: $input-background;
-    &:after {
-        content: "";
-        position: absolute;
-        left: 0px;
-        right: 0px;
-        bottom: 0px;
-        z-index: 5;
-        height: 2px;
-        border-bottom-left-radius: 2px;
-        border-bottom-right-radius: 2px;
-        background-position: 0% 0%;
-        background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
-        background-size: 500% auto;
-        animation: gradient 3s linear infinite;
-    }
+  position: relative;
+  display: none;
+  flex-direction: row;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  padding: 1rem 2rem 1.2rem;
+  background: $input-background;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 5;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    background: linear-gradient(
+      to right,
+      #b294ff,
+      #57e6e6,
+      #feffb8,
+      #57e6e6,
+      #b294ff,
+      #57e6e6
+    );
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
 
-    input {
-        text-align: center;
-        border-style: none;
-        background: transparent;
-        outline: none;
-        flex-grow: 1;
-        color: $input-text-active;
-        font-size: 1.8rem;
-        line-height: 2.4rem;
-        vertical-align: middle;
-        &::-webkit-input-placeholder {
-            color: $input-text-inactive;
-        }
+  input {
+    text-align: center;
+    border-style: none;
+    background: transparent;
+    outline: none;
+    flex-grow: 1;
+    color: $input-text-active;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    &::-webkit-input-placeholder {
+      color: $input-text-inactive;
     }
+  }
 }
 
 /* Auto Adjustment */
 @media (max-width: 1000px) {
-    html {
-        overflow: -moz-hidden-unscrollable;
-        overflow: hidden;
-    }
+  html {
+    overflow: -moz-hidden-unscrollable;
+    overflow: hidden;
+  }
 
-    body {
-        // Firefox Scrollbar
-        scrollbar-color: lightgray transparent;
-        scrollbar-width: thin;
-    }
+  body {
+    // Firefox Scrollbar
+    scrollbar-color: lightgray transparent;
+    scrollbar-width: thin;
+  }
 }
 
 @media (max-width: 800px) {
-    .webflow-style-input {
-        top: -10px!important; /* Important to override previous state */
-    }
-    .area {
-        scrollbar-color: unset;
-        scrollbar-width: auto;
-        overflow-x: hidden;
-    }
+  .webflow-style-input {
+    top: -10px !important; /* Important to override previous state */
+  }
+  .area {
+    scrollbar-color: unset;
+    scrollbar-width: auto;
+    overflow-x: hidden;
+  }
 
-    ::-webkit-scrollbar {
-        width: 0em;
-        height: 0em;
-    }
+  ::-webkit-scrollbar {
+    width: 0em;
+    height: 0em;
+  }
 
-    #bottom {
-        p {
-            position: relative;
-            text-size-adjust: auto;
-            width: 50%;
-        }
-
-        p:nth-child(2) {
-            left: calc(50vw - 155px);
-        }
-
-        p:nth-child(1) {
-            position: relative;
-            top: 5px;
-            margin-bottom: 11px;
-            left: calc(50vw - 90px);
-        }
+  #bottom {
+    p {
+      position: relative;
+      text-size-adjust: auto;
+      width: 50%;
     }
 
-    .vtubers{
-        padding-top: 20px;
-        width: 800px;
-        max-width: 100%;
-        margin: 0 auto;
-
-        .list {
-            border-bottom: 1px white;
-            border-left: none;
-            border-right: none;
-
-            .vtuber {
-                margin-bottom: 15px;
-                margin-left: -50px;
-                margin-right: -50px;
-                text-align: center;
-                display: block;
-                z-index: 1;
-                position: relative;
-            }
-        }
+    p:nth-child(2) {
+      left: calc(50vw - 155px);
     }
 
-    .vtubers {
-        padding-top: 20px;
-        width: 800px;
-        max-width: 100%;
-        margin: 0 auto;
-
-        .title {
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            display: flex;
-        }
-    
-        .title h1 {
-            margin: 5px 5px 0;
-            color: var(--white);
-            font-weight: 700;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-
-        .list {
-            text-align: center;
-            padding-top: 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            .text h3 {
-                margin-top: -19px;
-            }
-        }
+    p:nth-child(1) {
+      position: relative;
+      top: 5px;
+      margin-bottom: 11px;
+      left: calc(50vw - 90px);
     }
+  }
+
+  .vtubers {
+    padding-top: 20px;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .list {
+      border-bottom: 1px white;
+      border-left: none;
+      border-right: none;
+
+      .vtuber {
+        margin-bottom: 15px;
+        margin-left: -50px;
+        margin-right: -50px;
+        text-align: center;
+        display: block;
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
+
+  .vtubers {
+    padding-top: 20px;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .title {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      display: flex;
+    }
+
+    .title h1 {
+      margin: 5px 5px 0;
+      color: var(--white);
+      font-weight: 700;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .list {
+      text-align: center;
+      padding-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .text h3 {
+        margin-top: -19px;
+      }
+    }
+  }
 }
 
-@media (max-width: 400px) {.vtubers .list .vtuber {transform: scale(0.9, 0.9)}}
+@media (max-width: 400px) {
+  .vtubers .list .vtuber {
+    transform: scale(0.9, 0.9);
+  }
+}
 
-@media (max-width: 360px) {.vtubers .list .vtuber {transform: scale(0.85, 0.85)}}
+@media (max-width: 360px) {
+  .vtubers .list .vtuber {
+    transform: scale(0.85, 0.85);
+  }
+}
+
+@keyframes rebrandMoveUp {
+  0% {
+    transform: translateY(0) translateX(-50%);
+  }
+  100% {
+    transform: translateY(-135px) translateX(-50%);
+  }
+}
+
+.rebrand {
+  display: flex;
+  position: fixed;
+  color: white;
+
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+
+  left: 50%;
+  top: 100vh;
+  transform: translateY(0px) translateX(-50%);
+  transition: transform 0.5s;
+
+  width: 100%;
+  max-width: 675px;
+
+  border-radius: 15px 15px 0px 0px;
+  overflow: hidden;
+  z-index: 25;
+
+  animation: rebrandMoveUp 1.5s ease-in-out forwards;
+  animation-delay: 2.5s;
+
+  &::before {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    content: "";
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 135px;
+
+    filter: grayscale(75%);
+
+    background: linear-gradient(
+        180deg,
+        rgba(16, 16, 16, 0) 59.38%,
+        rgb(23, 23, 25) 100%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%),
+      url("https://vtubers.vercel.app/img/header/doggirls/inugami_korone.webp"), lightgray 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 32.5%;
+
+    image-rendering: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .alert {
+      font-size: 23px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+
+    .info {
+      color: #eaeaea;
+
+      a {
+        color: rgb(189, 204, 221);
+        &:hover {
+          color: rgb(222, 237, 253);
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .btn {
+      width: fit-content;
+
+      border-radius: 9px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      
+      color: #0e3e48;
+      background-color: #35afca;
+      font-weight: 600;
+
+      transition: box-shadow 0.15s, transform 0.15s;
+
+      &:hover {
+        box-shadow: 0px 0px 35px -7.5px #35afca;
+        transform: scale(1.025);
+      }
+
+      i {
+        position: relative;
+
+        margin-left: 5px;
+        top: 1px;
+
+        font-size: 16px;
+      }
+    }
+
+    button {
+      position: relative;
+
+      color: #9b9b9b;
+      border: none;
+      background-color: transparent;
+      padding: 7.5px;
+      
+      top: 7px;
+
+      &:hover {
+        color: #c4c4c4;
+      }
+    }
+  }
+}
+
+.rebrandHide {
+  display: none;
+}
